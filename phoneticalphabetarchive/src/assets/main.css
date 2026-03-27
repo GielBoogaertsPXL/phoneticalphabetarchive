@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* COLOR */
+  --darkgreen: #0C5849;
+  --lightgreen: #269686;
+  --darkblue: #404480;
+  --lightblue: #5783C2;
+  --darkorange: #C74017;
+  --lightorange: #E17953;
+  --bordeaux: #7C2A37;
+  --white: #FCFCFC;
+  --black: #0c0c0c;
+
+  /*TYPOGRAPHY*/
+  --header-1: 700 4rem/4.5rem Poppins, sans-serif;
+  --header-2: 700 2rem/2.5rem Poppins, sans-serif;
+  --header-3: 700 1.2rem/1.4rem Poppins, sans-serif;
+
+  --body: 200 1rem/1.3rem Poppins, sans-serif;
+  --body-bold: 500 1rem/1.3rem Poppins, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
