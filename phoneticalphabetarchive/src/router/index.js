@@ -35,6 +35,12 @@ const router = createRouter({
       component: () => import('@/views/DetailView.vue'),
     },
   ],
+  scrollBehavior(to) {
+    if (to.hash) {
+      return { el: to.hash, behavior: 'smooth' }
+    }
+    return { top: 0, behavior: 'instant' }
+  },
 })
 
 export default router

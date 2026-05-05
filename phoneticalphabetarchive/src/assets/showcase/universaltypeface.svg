@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Laag_1" data-name="Laag 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 437.22 319.11">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #1d1d1b;
+        font-size: 62px;
+      }
+
+      .cls-2 {
+        font-family: Helvetica, Helvetica;
+      }
+
+      .cls-3 {
+        font-family: BayerUniversalRegular, 'Bayer Universal';
+      }
+    </style>
+  </defs>
+  <text class="cls-1" transform="translate(0 49.29)"><tspan class="cls-3"><tspan x="0" y="0">Der schnelle braune </tspan></tspan><tspan class="cls-3"><tspan x="0" y="48">Fuchs springt uber </tspan></tspan><tspan class="cls-3" x="0" y="94.03">den faulen Hund</tspan><tspan class="cls-2" x="356.68" y="97.97">.</tspan><tspan class="cls-3" x="373.91" y="94.03"> </tspan><tspan class="cls-3" x="0" y="142.03">Er musste es nicht</tspan><tspan class="cls-2" x="385.82" y="145.97">,</tspan><tspan class="cls-3" x="403.04" y="142.03"> </tspan><tspan class="cls-3" x="0" y="190.03">aber er dachte</tspan><tspan class="cls-2" x="325.19" y="193.97">,</tspan><tspan class="cls-3" x="342.41" y="190.03" xml:space="preserve"> es </tspan><tspan class="cls-3" x="0" y="238.03">ware frech</tspan><tspan class="cls-2" x="220.1" y="241.97">.</tspan></text>
+</svg>

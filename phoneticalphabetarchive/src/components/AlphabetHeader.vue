@@ -8,13 +8,11 @@ const alphabet = computed(() => alphabets.find((a) => a.id === route.params.id))
 
 const currentIndex = computed(() => alphabets.findIndex((a) => a.id === route.params.id))
 
-const prevAlphabet = computed(() =>
-  currentIndex.value > 0 ? alphabets[currentIndex.value - 1] : null,
+const prevAlphabet = computed(
+  () => alphabets[(currentIndex.value - 1 + alphabets.length) % alphabets.length],
 )
 
-const nextAlphabet = computed(() =>
-  currentIndex.value < alphabets.length - 1 ? alphabets[currentIndex.value + 1] : null,
-)
+const nextAlphabet = computed(() => alphabets[(currentIndex.value + 1) % alphabets.length])
 </script>
 
 <template>
@@ -28,7 +26,7 @@ const nextAlphabet = computed(() =>
       <h1>{{ alphabet.title }}</h1>
     </div>
     <nav>
-      <RouterLink v-if="prevAlphabet" :to="{ name: 'alphabet', params: { id: prevAlphabet.id } }">
+      <RouterLink :to="{ name: 'alphabet', params: { id: prevAlphabet.id } }">
         <span class="nav-meta">
           <span class="nav-dir">← Previous</span>
         </span>
@@ -36,7 +34,7 @@ const nextAlphabet = computed(() =>
       <a href="#showcase">Showcase</a>
       <a href="#info">Info</a>
       <a href="#alphabet">Alphabet</a>
-      <RouterLink v-if="nextAlphabet" :to="{ name: 'alphabet', params: { id: nextAlphabet.id } }">
+      <RouterLink :to="{ name: 'alphabet', params: { id: nextAlphabet.id } }">
         <span class="nav-meta align-right">
           <span class="nav-dir">Next →</span>
         </span>

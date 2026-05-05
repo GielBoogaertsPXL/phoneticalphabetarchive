@@ -21,7 +21,7 @@ a {
   /*TYPOGRAPHY*/
   --font: Jetbrains Mono, sans-serif;
 
-  --header-1: 600 3rem/5.5rem var(--font);
+  --header-1: 600 3rem/6rem var(--font);
   --header-2: 600 2rem var(--font);
   --header-3: 500 1.5rem var(--font);
 

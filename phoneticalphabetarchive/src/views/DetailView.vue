@@ -95,6 +95,7 @@ const nextGrapheme = computed(
             Vowels
           </button>
           <div class="empty"></div>
+          <div class="amount">{{ filteredGraphemes.length }}</div>
         </div>
 
         <div class="graphemes">
@@ -214,7 +215,8 @@ main {
   display: flex;
 }
 
-button {
+button,
+.amount {
   background: none;
   width: 20%;
   border: 0.2rem solid var(--primary-color);
@@ -227,6 +229,16 @@ button {
   font: var(--header-3);
 }
 
+button.active {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.amount {
+  border-right: none;
+  font-weight: 800;
+}
+
 button:hover {
   background-color: var(--secondary-color);
   color: white;
@@ -234,8 +246,9 @@ button:hover {
 }
 
 .empty {
-  width: 40%;
+  width: 20%;
   border-bottom: 0.2rem solid var(--primary-color);
+  border-right: 0.2rem solid var(--primary-color);
 }
 
 .graphemes {
