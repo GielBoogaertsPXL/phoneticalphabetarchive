@@ -1,15 +1,15 @@
 <script setup>
 import alphabets from '@/assets/alphabets.json'
 import { useRoute } from 'vue-router'
-import { computed, ref } from 'vue'
+import { computed, ref, watch } from 'vue'
 
 const route = useRoute()
 
 const alphabet = computed(() => alphabets.find((a) => a.id === route.params.id))
 
 const infoLabels = {
-  image: 'Creator',
-  author: 'Creator',
+  image: 'Creator(s)',
+  author: 'Creator(s)',
   publication: 'Publication',
   motivation: 'Motivation',
   system: 'System',
@@ -26,15 +26,28 @@ const alphabetGraphemes = computed(() => {
       url,
       name: path.split('/').pop().replace('.svg', ''),
     }))
+    .sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true }))
 })
 
 const filter = ref('all')
+watch(
+  () => route.params.id,
+  () => {
+    filter.value = 'all'
+  },
+)
 
 const filteredGraphemes = computed(() => {
-  if (filter.value === 'voiced')
-    return alphabetGraphemes.value.filter((g) => g.name.includes('voiced'))
-  if (filter.value === 'unvoiced')
-    return alphabetGraphemes.value.filter((g) => !g.name.includes('voiced'))
+  if (filter.value === 'consonants')
+    return alphabetGraphemes.value.filter(
+      (g) =>
+        g.name.includes('voiced') || g.name.includes('consonant') || g.name.includes('ejective'),
+    )
+  if (filter.value === 'vowels')
+    return alphabetGraphemes.value.filter(
+      (g) =>
+        !g.name.includes('voiced') && !g.name.includes('consonant') && !g.name.includes('ejective'),
+    )
   return alphabetGraphemes.value
 })
 
@@ -53,6 +66,14 @@ const prevGrapheme = computed(
 
 const nextGrapheme = computed(
   () => filteredGraphemes.value[(selectedIndex.value + 1) % filteredGraphemes.value.length],
+)
+
+const authorError = ref(false)
+watch(
+  () => route.params.id,
+  () => {
+    authorError.value = false
+  },
 )
 </script>
 
@@ -73,11 +94,15 @@ const nextGrapheme = computed(
         <div class="information" v-for="(label, key) in infoLabels" :key="key">
           <div class="category">{{ label }}</div>
           <div class="text">
-            <img
-              v-if="key === 'image'"
-              :src="`/src/assets/authors/${alphabet.id}.webp`"
-              :alt="`Author of ${alphabet.title}`"
-            />
+            <template v-if="key === 'image'">
+              <img
+                v-if="!authorError"
+                :src="`/src/assets/authors/${alphabet.id}.webp`"
+                :alt="`Author of ${alphabet.title}`"
+                @error="authorError = true"
+              />
+              <span v-else>No picture</span>
+            </template>
             <span v-else>{{ alphabet.information[key] ?? alphabet[key] }}</span>
           </div>
         </div>
@@ -88,10 +113,10 @@ const nextGrapheme = computed(
       <section id="alphabet">
         <div class="filters">
           <button :class="{ active: filter === 'all' }" @click="filter = 'all'">All</button>
-          <button :class="{ active: filter === 'voiced' }" @click="filter = 'voiced'">
+          <button :class="{ active: filter === 'consonants' }" @click="filter = 'consonants'">
             Consonants
           </button>
-          <button :class="{ active: filter === 'unvoiced' }" @click="filter = 'unvoiced'">
+          <button :class="{ active: filter === 'vowels' }" @click="filter = 'vowels'">
             Vowels
           </button>
           <div class="empty"></div>
@@ -254,6 +279,7 @@ button:hover {
 .graphemes {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .grapheme {
@@ -261,7 +287,7 @@ button:hover {
   border-left: none;
   border-top: none;
   width: 16.666%;
-  padding: 1.5rem 1rem;
+  padding: 3rem 1rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
