@@ -1,95 +1,70 @@
 <script setup>
-import { ref } from 'vue'
+import { useRoute } from 'vue-router'
 
-const menuOpen = ref(false)
+const route = useRoute()
 </script>
 
 <template>
   <header>
-    <h1>THE PHONETIC ALPHABET ARCHIVE</h1>
-    <div>
-      <button class="hamburger" @click="menuOpen = !menuOpen" :class="{ open: menuOpen }">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <nav :class="{ open: menuOpen }">
-        <RouterLink to="/" @click="menuOpen = false">Archive</RouterLink>
-        <RouterLink to="/about" @click="menuOpen = false">About</RouterLink>
-      </nav>
+    <div class="title">
+      <h1>{{ route.name }}</h1>
     </div>
+    <nav>
+      <RouterLink :to="{ name: 'THE PHONETIC ALPHABET ARCHIVE' }">Archive</RouterLink>
+      <RouterLink :to="{ name: 'ABOUT' }">About</RouterLink>
+      <RouterLink :to="{ name: 'CONTACT' }">Contact</RouterLink>
+      <RouterLink :to="{ name: 'GLOSSARY' }">Glossary</RouterLink>
+      <RouterLink :to="{ name: 'PHONETICS' }">Phonetics</RouterLink>
+    </nav>
+    <div class="filler"></div>
   </header>
 </template>
 
 <style scoped>
 header {
-  height: fit-content;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  padding: 2rem;
-  z-index: 100;
+  border: 0.2rem solid var(--primary-color);
 }
 
-h1 {
+.title {
+  width: 100%;
+  padding: 6rem 8rem;
+  text-align: center;
   font: var(--header-1);
-  position: relative;
-  bottom: 0.7rem;
 }
 
 nav {
-  display: none;
-}
-
-nav.open {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: end;
-}
-
-div {
-  display: flex;
-  flex-direction: column;
-  align-items: end;
+  justify-content: space-between;
 }
 
 a {
-  text-decoration: none;
+  width: 20%;
+  border: 0.2rem solid var(--primary-color);
+  border-left: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
   font: var(--header-2);
 }
 
-a::after {
-  height: 4px;
+a:nth-child(5) {
+  border-right: none;
 }
 
-.hamburger {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  align-self: end;
+a:hover {
+  background: var(--secondary-color);
+  color: white;
 }
 
-.hamburger span {
-  display: block;
-  width: 2rem;
-  height: 4px;
-  transition: all 0.3s ease;
-  background: black;
-}
-
-.hamburger.open span:nth-child(1) {
-  transform: translateY(9px) rotate(45deg);
-}
-
-.hamburger.open span:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.open span:nth-child(3) {
-  transform: translateY(-9px) rotate(-45deg);
-  margin-bottom: 0.2rem;
+.filler {
+  width: 100%;
+  height: 10rem;
 }
 </style>

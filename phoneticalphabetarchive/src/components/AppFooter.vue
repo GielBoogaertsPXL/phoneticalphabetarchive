@@ -2,62 +2,71 @@
 
 <template>
   <footer>
-    <h2>THE PHONETIC ALPHABET ARCHIVE</h2>
-    <div>
-      <section>
-        <h3>ABOUT</h3>
-        <RouterLink to="/about">The project</RouterLink>
-        <RouterLink to="/about">Who am I?</RouterLink>
-      </section>
-      <section>
-        <h3>CONTACT</h3>
-        <a href="mailto:boogaertsgiel@gmail.com">Mail</a>
-        <a href="https://www.instagram.com/gielboogaerts.studio/">Instagram</a>
-        <a href="https://www.linkedin.com/in/giel-boogaerts-581b96224/">LinkedIn</a>
-      </section>
-      <section>
-        <h3>LEGAL</h3>
-        <a download="privacyPolicy.pdf">Privacy policy</a>
-        <a download="termsOfUse.pdf">Terms of use</a>
-      </section>
+    <div class="filler"></div>
+    <div class="title">THE PHONETIC ALPHABET ARCHIVE</div>
+    <div class="information">
+      <div class="side"></div>
+      <div class="copyright">©2026 — gielboogaertsstudio</div>
+      <div class="privacy">Privacy</div>
     </div>
   </footer>
 </template>
 
 <style scoped>
 footer {
-  width: 100%;
-  height: fit-content;
-  padding: 2rem 6rem 6rem 2rem;
-  color: var(--white);
-  display: flex;
-  justify-content: space-between;
-}
-
-section {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border: 0.2rem solid var(--primary-color);
+  margin-top: -0.19rem;
 }
 
-div {
-  width: fit-content;
+.title {
+  width: 100%;
+  padding: 1rem;
+  border-bottom: 0.2rem solid var(--primary-color);
+  font: var(--header-2);
+  font-weight: 400;
+}
+
+.information {
   display: flex;
-  gap: 5rem;
-  justify-content: flex-end;
+  justify-content: space-between;
+  width: 100%;
 }
 
-h2 {
-  font: var(--header-1);
-  width: 25rem;
+.information div {
+  padding: 1rem;
+  font: var(--header-3);
+  font-weight: 700;
+  text-align: center;
 }
 
-h3 {
-  font: var(--body-bold);
-  margin-bottom: 1rem;
+.side {
+  width: 25%;
 }
 
-a {
-  color: var(--white);
-  font: var(--body);
+.privacy {
+  width: 25%;
+}
+
+.privacy:hover {
+  background: var(--secondary-color);
+  color: white;
+  cursor: pointer;
+}
+
+.copyright {
+  width: 50%;
+  border-right: 0.2rem solid var(--primary-color);
+  border-left: 0.2rem solid var(--primary-color);
+}
+
+.filler {
+  width: 100%;
+  height: 10rem;
+  border-bottom: 0.2rem solid var(--primary-color);
 }
 </style>

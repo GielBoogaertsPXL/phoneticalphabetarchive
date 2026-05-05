@@ -1,125 +1,135 @@
 <script setup>
-import AppFooter from '@/components/AppFooter.vue'
-import AppHeader from '@/components/AppHeader.vue'
 import alphabets from '@/assets/alphabets.json'
 import { useRoute } from 'vue-router'
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 
 const route = useRoute()
 
 const alphabet = computed(() => alphabets.find((a) => a.id === route.params.id))
 
-const currentIndex = computed(() => alphabets.findIndex((a) => a.id === route.params.id))
-
-const prevAlphabet = computed(() =>
-  currentIndex.value > 0 ? alphabets[currentIndex.value - 1] : null,
-)
-
-const nextAlphabet = computed(() =>
-  currentIndex.value < alphabets.length - 1 ? alphabets[currentIndex.value + 1] : null,
-)
-
 const infoLabels = {
-  language: 'Language(s)',
-  number: 'Number of characters',
+  image: 'Creator',
   author: 'Creator',
   publication: 'Publication',
   motivation: 'Motivation',
   system: 'System',
-  longevity: 'Longevity',
+  longevity: 'Implementation',
 }
+
+const allGraphemes = import.meta.glob('/src/assets/graphemes/**/*.svg', { eager: true, as: 'url' })
+
+const alphabetGraphemes = computed(() => {
+  const prefix = `/src/assets/graphemes/${alphabet.value.id}/`
+  return Object.entries(allGraphemes)
+    .filter(([path]) => path.startsWith(prefix))
+    .map(([path, url]) => ({
+      url,
+      name: path.split('/').pop().replace('.svg', ''),
+    }))
+})
+
+const filter = ref('all')
+
+const filteredGraphemes = computed(() => {
+  if (filter.value === 'voiced')
+    return alphabetGraphemes.value.filter((g) => g.name.includes('voiced'))
+  if (filter.value === 'unvoiced')
+    return alphabetGraphemes.value.filter((g) => !g.name.includes('voiced'))
+  return alphabetGraphemes.value
+})
+
+const selectedGrapheme = ref(null)
+
+const selectedIndex = computed(() =>
+  filteredGraphemes.value.findIndex((g) => g.url === selectedGrapheme.value?.url),
+)
+
+const prevGrapheme = computed(
+  () =>
+    filteredGraphemes.value[
+      (selectedIndex.value - 1 + filteredGraphemes.value.length) % filteredGraphemes.value.length
+    ],
+)
+
+const nextGrapheme = computed(
+  () => filteredGraphemes.value[(selectedIndex.value + 1) % filteredGraphemes.value.length],
+)
 </script>
 
 <template>
   <div id="page" v-if="alphabet">
-    <AppHeader :style="{ color: 'var(--darkgreen)' }" />
-
     <main>
-      <div class="back">
-        <RouterLink :to="{ name: 'home' }">← All alphabets</RouterLink>
-      </div>
+      <section id="showcase">
+        <img
+          class="showcase-img"
+          :src="`/src/assets/showcase/${alphabet.id}.svg`"
+          :alt="alphabet.title"
+        />
+      </section>
 
-      <div class="detail">
-        <!-- Left: large glyph -->
-        <div class="glyph-column">
-          <div class="glyph-wrap">
-            <svg
-              class="grapheme"
-              :viewBox="alphabet.viewBox"
-              :style="alphabet.color ? { fill: alphabet.color } : {}"
-            >
-              <g :id="alphabet.id">
-                <path :d="alphabet.path" />
-              </g>
-            </svg>
+      <div class="filler"></div>
+
+      <section id="info">
+        <div class="information" v-for="(label, key) in infoLabels" :key="key">
+          <div class="category">{{ label }}</div>
+          <div class="text">
+            <img
+              v-if="key === 'image'"
+              :src="`/src/assets/authors/${alphabet.id}.webp`"
+              :alt="`Author of ${alphabet.title}`"
+            />
+            <span v-else>{{ alphabet.information[key] ?? alphabet[key] }}</span>
           </div>
         </div>
+      </section>
 
-        <!-- Right: info -->
-        <div class="info-column">
-          <span class="year">{{ alphabet.year }}</span>
-          <h1>{{ alphabet.title }}</h1>
+      <div class="filler"></div>
 
-          <div class="divider" />
-
-          <dl v-if="alphabet.information" class="info-list">
-            <template v-for="(label, key) in infoLabels" :key="key">
-              <template v-if="alphabet.information[key]">
-                <dt>{{ label }}</dt>
-                <dd>{{ alphabet.information[key] }}</dd>
-              </template>
-            </template>
-          </dl>
-
-          <p v-else class="no-info">No further information available for this alphabet.</p>
+      <section id="alphabet">
+        <div class="filters">
+          <button :class="{ active: filter === 'all' }" @click="filter = 'all'">All</button>
+          <button :class="{ active: filter === 'voiced' }" @click="filter = 'voiced'">
+            Consonants
+          </button>
+          <button :class="{ active: filter === 'unvoiced' }" @click="filter = 'unvoiced'">
+            Vowels
+          </button>
+          <div class="empty"></div>
         </div>
-      </div>
 
-      <!-- Prev / Next navigation -->
-      <nav class="pagination">
-        <RouterLink
-          v-if="prevAlphabet"
-          :to="{ name: 'alphabet', params: { id: prevAlphabet.id } }"
-          class="nav-link prev"
-        >
-          <svg class="nav-glyph" :viewBox="prevAlphabet.viewBox">
-            <path :d="prevAlphabet.path" />
-          </svg>
-          <span class="nav-meta">
-            <span class="nav-dir">← Previous</span>
-            <span class="nav-title">{{ prevAlphabet.title }}</span>
-          </span>
-        </RouterLink>
+        <div class="graphemes">
+          <div
+            v-for="grapheme in filteredGraphemes"
+            :key="grapheme.path"
+            @click="selectedGrapheme = grapheme"
+            class="grapheme"
+          >
+            <img :src="grapheme.url" :alt="grapheme.name" />
+            <p>{{ grapheme.name }}</p>
+          </div>
 
-        <div v-else class="nav-link placeholder" />
-
-        <RouterLink
-          v-if="nextAlphabet"
-          :to="{ name: 'alphabet', params: { id: nextAlphabet.id } }"
-          class="nav-link next"
-        >
-          <span class="nav-meta align-right">
-            <span class="nav-dir">Next →</span>
-            <span class="nav-title">{{ nextAlphabet.title }}</span>
-          </span>
-          <svg class="nav-glyph" :viewBox="nextAlphabet.viewBox">
-            <path :d="nextAlphabet.path" />
-          </svg>
-        </RouterLink>
-
-        <div v-else class="nav-link placeholder" />
-      </nav>
+          <div class="modal" v-if="selectedGrapheme">
+            <div class="detail">
+              <div class="buttons">
+                <button @click.stop="selectedGrapheme = prevGrapheme">Previous</button>
+                <button @click.stop="selectedGrapheme = null">Close</button>
+                <button @click.stop="selectedGrapheme = nextGrapheme">Next</button>
+              </div>
+              <div class="modal-content">
+                <img :src="selectedGrapheme.url" :alt="selectedGrapheme.name" />
+                <p>{{ selectedGrapheme.name }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-
-    <AppFooter :style="{ backgroundColor: 'var(--darkgreen)' }" />
   </div>
 
   <div v-else id="page">
-    <AppHeader :style="{ color: 'var(--darkgreen)' }" />
     <main>
       <p class="not-found">Alphabet not found.</p>
     </main>
-    <AppFooter :style="{ backgroundColor: 'var(--darkgreen)' }" />
   </div>
 </template>
 
@@ -134,218 +144,194 @@ const infoLabels = {
 
 main {
   width: 100%;
-  padding: 6rem 2rem 10rem;
+  flex: 1;
   display: flex;
   flex-direction: column;
+  border-right: 0.2rem solid var(--primary-color);
+  border-left: 0.2rem solid var(--primary-color);
 }
 
-/* Back link */
-.back {
-  margin-bottom: 4rem;
+#showcase {
+  width: 100%;
+  padding: 4vw;
+  border-bottom: 0.2rem solid var(--primary-color);
 }
 
-.back a {
-  font: var(--body);
-  color: var(--darkgreen);
-  text-decoration: none;
-  letter-spacing: 0.03em;
+.showcase-img {
+  width: 100%;
 }
 
-.back a:hover {
-  opacity: 1;
-}
-
-/* Main detail layout */
-.detail {
-  display: grid;
-  grid-template-columns: 1fr 1.4fr;
-  gap: 6rem;
-  align-items: start;
-}
-
-/* Glyph */
-.glyph-column {
-  position: sticky;
-  top: 4rem;
-}
-
-.glyph-wrap {
+#info {
+  width: 100%;
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  border-top: 0.2rem solid var(--primary-color);
+}
+
+.category {
+  width: 100%;
+  border-bottom: 0.2rem solid var(--primary-color);
+  font: var(--header-3);
+  display: flex;
   justify-content: center;
-  padding: 4rem;
-  aspect-ratio: 1;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.text {
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text img {
+  height: 12rem;
+}
+
+.information {
+  width: 33.333%;
+  border: 0.2rem solid var(--primary-color);
+  border-top: none;
+  border-left: none;
+  font: var(--body);
+}
+
+.information:nth-child(3n) {
+  border-right: none;
+}
+
+#alphabet {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 0.2rem solid var(--primary-color);
+}
+
+.filters {
+  width: 100%;
+  display: flex;
+}
+
+button {
+  background: none;
+  width: 20%;
+  border: 0.2rem solid var(--primary-color);
+  border-left: none;
+  border-top: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  font: var(--header-3);
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+  color: white;
+  cursor: pointer;
+}
+
+.empty {
+  width: 40%;
+  border-bottom: 0.2rem solid var(--primary-color);
+}
+
+.graphemes {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .grapheme {
-  fill: var(--darkgreen);
-  max-width: 100%;
-  max-height: 32vw;
-  width: auto;
-  height: auto;
-}
-
-/* Info column */
-.info-column {
-  padding-top: 0.5rem;
-  padding-right: 5rem;
-}
-
-.year {
-  display: block;
-  font: var(--body);
-  color: var(--darkgreen);
-  font: var(--header-3);
-  margin-bottom: 1rem;
-  margin-left: 0.2rem;
-}
-
-h1 {
-  font: var(--body-bold);
-  color: var(--darkgreen);
-  font: var(--header-1);
-}
-
-/* Info list */
-.info-list {
-  margin-top: 3rem;
-  display: grid;
-  grid-template-columns: max-content 1fr;
-  gap: 0;
-}
-
-.info-list dt {
-  font: var(--body-bold);
-  color: var(--darkgreen);
-  font: var(--body-bold);
-  text-transform: uppercase;
-  padding: 1.5rem 2rem 1.5rem 0;
-  border-top: 1px solid color-mix(in srgb, var(--darkgreen) 12%, transparent);
-  align-self: start;
-}
-
-.info-list dd {
-  font: var(--body);
-  color: var(--darkgreen);
-  font: var(--body);
-  padding: 1.5rem 0;
-  border-top: 1px solid color-mix(in srgb, var(--darkgreen) 12%, transparent);
-}
-
-.no-info {
-  font: var(--body);
-  color: var(--darkgreen);
-  font-style: italic;
-}
-
-/* Pagination */
-.pagination {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 8rem;
-  padding-top: 3rem;
-  border-top: 1px solid color-mix(in srgb, var(--darkgreen) 15%, transparent);
-  gap: 2rem;
-}
-
-.nav-link {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  text-decoration: none;
-  padding: 1rem;
-  margin: -1rem;
-  flex: 1;
-}
-
-.nav-link.next {
-  justify-content: flex-end;
-}
-
-.nav-link.placeholder {
-  pointer-events: none;
-}
-
-.nav-glyph {
-  fill: var(--darkgreen);
-  width: auto;
-  height: 3rem;
-  flex-shrink: 0;
-}
-
-.nav-meta {
+  border: 0.2rem solid var(--primary-color);
+  border-left: none;
+  border-top: none;
+  width: 16.666%;
+  padding: 1.5rem 1rem;
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
 }
 
-.nav-meta.align-right {
-  text-align: right;
+.grapheme:nth-child(6n) {
+  border-right: none;
 }
 
-.nav-dir {
+.grapheme img {
+  height: 4vw;
+}
+
+.grapheme p {
+  font: var(--body-small);
+  text-align: center;
+}
+
+.grapheme:hover {
+  background-color: var(--secondary-color);
+  color: white;
+  cursor: pointer;
+}
+
+.grapheme:hover img {
+  filter: invert(1);
+}
+
+.filler {
+  width: 100%;
+  height: 10rem;
+}
+
+.modal {
+  position: fixed;
+  width: 100%;
+  inset: 0;
+  background: white;
+  z-index: 100;
+  padding: 1rem;
+}
+
+.detail {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10rem;
+  border: 0.2rem solid var(--primary-color);
+  border-top: none;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons button {
+  border: 0.2rem solid var(--primary-color);
+  border-left: none;
+  width: 33.333%;
+}
+
+.buttons button:nth-child(3) {
+  border-right: none;
+}
+
+.modal p {
   font: var(--body);
-  font-size: 0.7rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--darkgreen);
+  margin-top: 5rem;
 }
 
-.nav-title {
-  font: var(--body-bold);
-  color: var(--darkgreen);
-  font-size: 0.9rem;
-}
-
-.not-found {
-  font: var(--body);
-  color: var(--darkgreen);
-  opacity: 0.5;
-  padding: 4rem 0;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .detail {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-
-  .glyph-column {
-    position: static;
-  }
-
-  .glyph-wrap {
-    aspect-ratio: auto;
-    padding: 3rem;
-  }
-
-  .grapheme {
-    max-height: 40vw;
-  }
-
-  .info-list {
-    grid-template-columns: 1fr;
-  }
-
-  .info-list dt {
-    padding-bottom: 0.25rem;
-    border-top: 1px solid color-mix(in srgb, var(--darkgreen) 12%, transparent);
-  }
-
-  .info-list dd {
-    padding-top: 0;
-    border-top: none;
-  }
-
-  .pagination {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .nav-link.next {
-    justify-content: flex-start;
-  }
+.modal img {
+  height: 40vh;
 }
 </style>

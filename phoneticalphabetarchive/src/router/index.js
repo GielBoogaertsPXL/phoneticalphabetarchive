@@ -1,24 +1,39 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '@/views/HomeView.vue'
+import ArchiveView from '@/views/ArchiveView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: HomeView,
+      name: 'THE PHONETIC ALPHABET ARCHIVE',
+      component: ArchiveView,
     },
     {
       path: '/about',
-      name: 'about',
-      component: ()=> import('@/views/AboutView.vue'),
+      name: 'ABOUT',
+      component: () => import('@/views/AboutView.vue'),
+    },
+    {
+      path: '/contact',
+      name: 'CONTACT',
+      component: () => import('@/views/ContactView.vue'),
+    },
+    {
+      path: '/glossary',
+      name: 'GLOSSARY',
+      component: () => import('@/views/GlossaryView.vue'),
+    },
+    {
+      path: '/phonetics',
+      name: 'PHONETICS',
+      component: () => import('@/views/PhoneticsView.vue'),
     },
     {
       path: '/alphabet/:id',
       name: 'alphabet',
-      component: ()=> import('@/views/DetailView.vue'),
-    }
+      component: () => import('@/views/DetailView.vue'),
+    },
   ],
 })
 
