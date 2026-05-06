@@ -16,9 +16,14 @@ const infoLabels = {
   longevity: 'Implementation',
 }
 
-const allGraphemes = import.meta.glob('/src/assets/graphemes/**/*.svg', { eager: true, as: 'url' })
+const allGraphemes = import.meta.glob('/src/assets/graphemes/**/*.svg', {
+  eager: true,
+  query: '?url',
+  import: 'default',
+})
 
 const alphabetGraphemes = computed(() => {
+  if (!alphabet.value) return []
   const prefix = `/src/assets/graphemes/${alphabet.value.id}/`
   return Object.entries(allGraphemes)
     .filter(([path]) => path.startsWith(prefix))
@@ -75,6 +80,9 @@ watch(
     authorError.value = false
   },
 )
+
+console.log(Object.keys(allGraphemes).slice(0, 3))
+console.log(`prefix: /src/assets/graphemes/${alphabet.value.id}/`)
 </script>
 
 <template>
