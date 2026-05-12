@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Laag_2" data-name="Laag 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.77 17.18">
+  <g id="Laag_2-2" data-name="Laag 2">
+    <g>
+      <circle cx="6.39" cy="8.42" r="1.76"/>
+      <circle cx="6.39" cy="15.42" r="1.76"/>
+      <path d="M11.09,8.36h1.69v-1.97c0-3.52-2.86-6.39-6.39-6.39S0,2.87,0,6.39v2h1.69v-2C1.69,3.79,3.8,1.69,6.39,1.69s4.7,2.11,4.7,4.7v1.97Z"/>
+    </g>
+  </g>
+</svg>
