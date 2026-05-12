@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Laag_2" data-name="Laag 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.29 35.42">
+<svg id="Laag_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.29 35.42">
   <defs>
     <style>
       .cls-1 {
@@ -7,7 +7,7 @@
       }
     </style>
   </defs>
-  <g id="Laag_1-2" data-name="Laag 1-2">
+  <g id="Laag_1-2">
     <path d="M23.68,24.92c0,1.26,2.61-.32,2.61,1.18,0,3.63-4.43,6.29-7.1,4.34-2.03-1.41-.71-5.67-.71-11.17.1-2.72-1.24-9.28,2.17-9.28,2.55,0,4.98,1.58,4.98,3.08,0,1.31-2.39.82-2.39,2.97,0,1.57.46,7.57.46,8.87h-.02Z"/>
   </g>
   <g>

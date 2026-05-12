@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Laag_3" data-name="Laag 3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8.39 15.64">
-  <g id="Laag_2" data-name="Laag 2">
+<svg id="Laag_3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8.39 15.64">
+  <g id="Laag_2">
     <g>
       <circle cx="1.03" cy="1.3" r="1.03"/>
       <polygon points=".04 7.7 .04 15.41 .27 15.64 8.16 15.64 8.39 15.41 8.39 7.92 7.93 7.92 7.93 15.18 .51 15.18 .51 7.79 7.8 .32 7.47 0 .11 7.54 .04 7.7"/>

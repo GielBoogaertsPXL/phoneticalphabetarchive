@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Laag_1" data-name="Laag 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.53 22">
+<svg id="Laag_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.53 22">
   <defs>
     <style>
       .cls-1 {
@@ -33,7 +33,7 @@
       }
     </style>
   </defs>
-  <g id="Laag_2" data-name="Laag 2">
+  <g id="Laag_2">
     <g>
       <g>
         <line class="cls-2" x1="5.13" y1="2.35" x2="20.51" y2="2.35"/>

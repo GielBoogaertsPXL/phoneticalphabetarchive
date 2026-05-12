@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Laag_1" data-name="Laag 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.03 13.28">
-  <g id="Laag_2" data-name="Laag 2">
+<svg id="Laag_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.03 13.28">
+  <g id="Laag_2">
     <path d="M2.32,0H0v13.28h11.03v-2.18H2.32v-2.32h8.71V0H2.32ZM8.93,6.17v.67s-.87-.01-.87-.01H2.32V2.03h6.6v4.14Z"/>
   </g>
 </svg>

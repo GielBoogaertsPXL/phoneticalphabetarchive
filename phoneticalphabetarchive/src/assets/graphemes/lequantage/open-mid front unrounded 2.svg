@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Laag_1" data-name="Laag 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.5 36.16">
-  <g id="Laag_2" data-name="Laag 2">
+<svg id="Laag_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.5 36.16">
+  <g id="Laag_2">
     <g>
       <path d="M26.5,23.82l-3.28-3.28h0l-10.61-10.61L2.98,20.54h0l-2.98,3.28h.03l12.34,12.34h2.6v-2.36l-9.98-9.98h21.51ZM7.95,20.54l4.89-5.39,5.39,5.39H7.95Z"/>
       <polygon points="7.95 10.61 2.98 10.61 12.6 0 23.22 10.61 18.24 10.61 12.85 5.22 7.95 10.61"/>
