@@ -91,7 +91,7 @@ console.log(`prefix: /src/assets/graphemes/${alphabet.value.id}/`)
       <section id="showcase">
         <img
           class="showcase-img"
-          :src="`/src/assets/showcase/${alphabet.id}.svg`"
+          :src="`/showcase/${alphabet.id}.svg`"
           :alt="alphabet.title"
         />
       </section>

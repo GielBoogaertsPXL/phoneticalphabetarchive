@@ -13,7 +13,7 @@ import alphabets from '@/assets/alphabets.json'
         <img
           class="grapheme"
           :class="{ 'no-invert': alphabet.color }"
-          :src="`/src/assets/exemplary-graphemes/${alphabet.id}.svg`"
+          :src="`/exemplary-graphemes/${alphabet.id}.svg`"
           :alt="alphabet.title"
         />
         <h2>{{ alphabet.title }}</h2>
