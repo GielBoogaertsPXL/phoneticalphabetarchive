@@ -63,8 +63,35 @@ a:hover {
   color: white;
 }
 
+.router-link-active {
+  background: var(--secondary-color);
+  color: white;
+}
+
 .filler {
   width: 100%;
   height: 10rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .title {
+    padding: 4rem 1rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  nav {
+    flex-direction: column;
+  }
+
+  a {
+    width: 100%;
+    border-right: none;
+    border-bottom: none;
+  }
+
+  a:nth-last-child(1) {
+    border-bottom: 0.2rem solid var(--primary-color);
+  }
 }
 </style>

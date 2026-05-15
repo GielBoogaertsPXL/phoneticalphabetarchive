@@ -55,10 +55,6 @@ a:nth-child(5n) {
   border-right: none;
 }
 
-a:nth-child(5n + 1) {
-  border-left: none;
-}
-
 a:hover {
   background-color: var(--secondary-color);
   color: white;
@@ -84,9 +80,71 @@ h2 {
   font: var(--body-bold);
   text-align: center;
   margin-top: 2rem;
+  overflow-wrap: break-word;
+  width: 100%;
 }
 
 p {
   font: var(--body);
+  width: 100%;
+  text-align: center;
+}
+
+@media screen and (max-width: 850px) {
+  a {
+    width: 25%;
+    border-right: 0.2rem solid var(--primary-color);
+  }
+
+  a:nth-child(4n) {
+    border-right: none;
+  }
+
+  a:nth-child(5n) {
+    border-right: 0.2rem solid var(--primary-color);
+  }
+
+  a:nth-child(6n):not(a:nth-child(4n)) {
+    border-right: 0.2rem solid var(--primary-color);
+  }
+
+  a img {
+    height: 8vw;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  a {
+    width: 33.333%;
+    border-right: 0.2rem solid var(--primary-color);
+    padding: 2rem 1rem;
+  }
+
+  a:nth-child(3n) {
+    border-right: none;
+  }
+
+  a:nth-child(4n):not(a:nth-child(3n)) {
+    border-right: 0.2rem solid var(--primary-color);
+  }
+
+  a:nth-child(6n):not(a:nth-child(4n)) {
+    border-right: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  a {
+    padding: 2rem 0.2rem;
+  }
+
+  h2 {
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
 }
 </style>

@@ -69,4 +69,29 @@ footer {
   height: 10rem;
   border-bottom: 0.2rem solid var(--primary-color);
 }
+
+@media screen and (max-width: 850px) {
+  .side {
+    display: none;
+  }
+
+  .information {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .information div {
+    padding: 1rem 0;
+  }
+
+  .copyright {
+    border-left: none;
+    width: 60%;
+  }
+
+  .privacy {
+    width: 40%;
+  }
+}
 </style>
