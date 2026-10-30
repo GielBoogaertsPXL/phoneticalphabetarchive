@@ -1,9 +1,10 @@
 <script setup>
-import AppFooter from '@/components/AppFooter.vue'
 </script>
 
 <template>
-  <AppFooter :style="{ backgroundColor: 'var(--darkorange)' }" />
+  <main>
+
+  </main>
 </template>
 
 <style scoped></style>

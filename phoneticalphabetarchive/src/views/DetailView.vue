@@ -8,8 +8,7 @@ const route = useRoute()
 const alphabet = computed(() => alphabets.find((a) => a.id === route.params.id))
 
 const infoLabels = {
-  image: 'Creator(s)',
-  author: 'Creator(s)',
+  author: 'Creator',
   publication: 'Publication',
   motivation: 'Motivation',
   system: 'System',
@@ -88,42 +87,55 @@ console.log(`prefix: /src/assets/graphemes/${alphabet.value.id}/`)
 <template>
   <div id="page" v-if="alphabet">
     <main>
-      <section id="showcase">
-        <img class="showcase-img" :src="`/showcase/${alphabet.id}.svg`" :alt="alphabet.title" />
-      </section>
-
-      <div class="filler"></div>
+      <header>
+        <h1>{{ alphabet.title }}</h1>
+        <img
+          v-if="!authorError"
+          :src="`/src/assets/authors/${alphabet.id}.webp`"
+          :alt="`Author of ${alphabet.title}`"
+          @error="authorError = true"
+          class="avatar"
+        />
+      </header>
 
       <section id="info">
         <div class="information" v-for="(label, key) in infoLabels" :key="key">
-          <div class="category">{{ label }}</div>
-          <div class="text">
-            <template v-if="key === 'image'">
-              <img
-                v-if="!authorError"
-                :src="`/src/assets/authors/${alphabet.id}.webp`"
-                :alt="`Author of ${alphabet.title}`"
-                @error="authorError = true"
-              />
-              <span v-else>No picture</span>
-            </template>
-            <span v-else>{{ alphabet.information[key] ?? alphabet[key] }}</span>
-          </div>
+          <span class="category">{{ label }}</span>
+          <p class="text">{{ alphabet.information[key] ?? alphabet[key] }}</p>
         </div>
       </section>
 
-      <div class="filler"></div>
+      <section class="showcase">
+        <div class="information">
+          <span class="category">Languages</span>
+          <div class="languages">
+            <span v-for="language in alphabet.language" :key="language">{{ language }}</span>
+          </div>
+        </div>
+
+        <div id="showcase">
+          <img class="showcase-img" :src="`/showcase/${alphabet.id}.svg`" :alt="alphabet.title" />
+          <p>
+            The quick brown fox jumps over the lazy dog. <br />
+            He did not have to, but he thought it was the cheeky thing to do.
+          </p>
+        </div>
+      </section>
 
       <section id="alphabet">
-        <div class="filters">
-          <button :class="{ active: filter === 'all' }" @click="filter = 'all'">All</button>
-          <button :class="{ active: filter === 'consonants' }" @click="filter = 'consonants'">
-            Consonants
-          </button>
-          <button :class="{ active: filter === 'vowels' }" @click="filter = 'vowels'">
-            Vowels
-          </button>
-          <div class="empty"></div>
+        <div class="alphabet-header">
+          <div class="filters">
+            <button :class="{ active: filter === 'all' }" @click="filter = 'all'">All</button>
+            <span>/</span>
+            <button :class="{ active: filter === 'consonants' }" @click="filter = 'consonants'">
+              Consonants
+            </button>
+            <span>/</span>
+            <button :class="{ active: filter === 'vowels' }" @click="filter = 'vowels'">
+              Vowels
+            </button>
+          </div>
+
           <div class="amount">{{ filteredGraphemes.length }}</div>
         </div>
 
@@ -177,107 +189,103 @@ main {
   flex: 1;
   display: flex;
   flex-direction: column;
-  border-right: 0.2rem solid var(--primary-color);
-  border-left: 0.2rem solid var(--primary-color);
+  padding: 10rem 2rem 0;
 }
 
-#showcase {
-  width: 100%;
-  padding: 4vw;
-  border-bottom: 0.2rem solid var(--primary-color);
+header {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 8rem;
 }
 
-.showcase-img {
-  width: 100%;
+h1 {
+  font-size: 5vw;
+  line-height: 6vw;
+  letter-spacing: -7%;
+}
+
+.avatar {
+  height: 5vw;
 }
 
 #info {
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  border-top: 0.2rem solid var(--primary-color);
+  gap: 1.5rem;
+}
+
+.information {
+  width: 20%;
+  font: var(--body);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .category {
   width: 100%;
-  border-bottom: 0.2rem solid var(--primary-color);
-  font: var(--header-3);
+  font: var(--body-bold);
+}
+
+.languages {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.5rem;
+  flex-direction: column;
 }
 
-.text {
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
+.showcase {
+  width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  margin-top: 10rem;
 }
 
-.text img {
-  height: 12rem;
+.showcase p {
+  font: var(--body-small);
 }
 
-.information {
-  width: 33.333%;
-  border: 0.2rem solid var(--primary-color);
-  border-top: none;
-  border-left: none;
-  font: var(--body);
-}
-
-.information:nth-child(3n) {
-  border-right: none;
+#showcase {
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-right: 11vw;
 }
 
 #alphabet {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  border-top: 0.2rem solid var(--primary-color);
+  margin-top: 15rem;
+}
+
+.alphabet-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 1rem;
 }
 
 .filters {
   width: 100%;
   display: flex;
-}
-
-button,
-.amount {
-  background: none;
-  width: 20%;
-  border: 0.2rem solid var(--primary-color);
-  border-left: none;
-  border-top: none;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 0.5rem;
-  font: var(--header-3);
 }
 
-button.active {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-.amount {
-  border-right: none;
-  font-weight: 800;
-}
-
-button:hover {
-  background-color: var(--secondary-color);
-  color: white;
+button {
+  padding: 0 0.25rem;
+  border: none;
+  background: none;
+  font: var(--body);
   cursor: pointer;
 }
 
-.empty {
-  width: 20%;
-  border-bottom: 0.2rem solid var(--primary-color);
-  border-right: 0.2rem solid var(--primary-color);
+button.active,
+button:hover {
+  font: var(--body-bold);
+}
+
+.amount {
+  font-weight: 700;
 }
 
 .graphemes {
@@ -287,20 +295,16 @@ button:hover {
 }
 
 .grapheme {
-  border: 0.2rem solid var(--primary-color);
-  border-left: none;
-  border-top: none;
   width: 16.666%;
   padding: 3rem 1rem;
+  border-radius: 0.5rem;
+  border-top: 1px solid var(--primary-color);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  gap: 1rem;
-}
-
-.grapheme:nth-child(6n) {
-  border-right: none;
+  gap: 1.5rem;
+  transition: background-color 0.4s ease;
 }
 
 .grapheme img {
@@ -313,25 +317,15 @@ button:hover {
 }
 
 .grapheme:hover {
-  background-color: var(--secondary-color);
-  color: white;
+  background-color: #d3d3d3;
   cursor: pointer;
-}
-
-.grapheme:hover img {
-  filter: invert(1);
-}
-
-.filler {
-  width: 100%;
-  height: 10rem;
 }
 
 .modal {
   position: fixed;
   width: 100%;
   inset: 0;
-  background: white;
+  background: #ececeb;
   z-index: 100;
   padding: 1rem;
 }
@@ -343,8 +337,6 @@ button:hover {
   flex-direction: column;
   align-items: center;
   gap: 10rem;
-  border: 0.2rem solid var(--primary-color);
-  border-top: none;
 }
 
 .modal-content {
@@ -360,13 +352,7 @@ button:hover {
 }
 
 .buttons button {
-  border: 0.2rem solid var(--primary-color);
-  border-left: none;
   width: 33.333%;
-}
-
-.buttons button:nth-child(3) {
-  border-right: none;
 }
 
 .modal p {
@@ -376,96 +362,5 @@ button:hover {
 
 .modal img {
   height: 40vh;
-}
-
-@media screen and (max-width: 1000px) {
-  .information {
-    width: 50%;
-    border-right: none;
-  }
-
-  .information:nth-child(odd) {
-    border-right: 0.2rem solid var(--primary-color);
-  }
-}
-
-@media screen and (max-width: 850px) {
-  .filters .empty {
-    display: none;
-  }
-
-  .filters button {
-    width: 33.333%;
-  }
-
-  .grapheme {
-    width: 25%;
-    border-right: 0.2rem solid var(--primary-color);
-  }
-
-  .grapheme:nth-child(4n) {
-    border-right: none;
-  }
-
-  .grapheme:nth-child(6n):not(.grapheme:nth-child(4n)) {
-    border-right: 0.2rem solid var(--primary-color);
-  }
-
-  .grapheme img {
-    height: 8vw;
-  }
-}
-
-@media screen and (max-width: 750px) {
-  .information {
-    width: 100%;
-  }
-
-  .information:nth-child(odd) {
-    border-right: none;
-  }
-
-  .category {
-    border-right: none;
-  }
-
-  .text {
-    border-right: none;
-  }
-
-  .filters {
-    flex-wrap: wrap;
-  }
-
-  button:nth-child(3) {
-    border-right: none;
-  }
-
-  .amount {
-    width: 100%;
-  }
-
-  .grapheme {
-    width: 33.333%;
-    border-right: 0.2rem solid var(--primary-color);
-  }
-
-  .grapheme:nth-child(3n) {
-    border-right: none;
-  }
-
-  .grapheme:nth-child(4n):not(.grapheme:nth-child(3n)) {
-    border-right: 0.2rem solid var(--primary-color);
-  }
-
-  .grapheme:nth-child(6n):not(.grapheme:nth-child(4n)) {
-    border-right: none;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  button {
-    width: 100%;
-  }
 }
 </style>

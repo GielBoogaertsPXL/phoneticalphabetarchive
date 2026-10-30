@@ -1,16 +1,23 @@
 html {
   scroll-behavior: smooth;
+  background-color: #ececeb;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: var(--font), sans-serif;
 }
 
 a {
   text-decoration: none;
   color: black;
+}
+
+.router-link-active,
+a:hover {
+  font: var(--body-bold);
 }
 
 :root {
@@ -19,34 +26,13 @@ a {
   --secondary-color: red;
 
   /*TYPOGRAPHY*/
-  --font: Jetbrains Mono, sans-serif;
+  --font: Poppins;
 
   --header-1: 600 3rem/6rem var(--font);
   --header-2: 600 2rem var(--font);
   --header-3: 500 1.5rem var(--font);
 
-  --body: 400 1rem/1.3rem var(--font);
-  --body-bold: 700 1rem/1.3rem var(--font);
-  --body-small: 400 0.75rem var(--font);
-}
-
-@media screen and (max-width: 1000px) {
-  :root {
-    --header-1: 600 2.5rem/5rem var(--font);
-    --header-2: 600 1.5rem var(--font);
-  }
-}
-
-@media screen and (max-width: 750px) {
-  :root {
-    --header-1: 600 2rem/4rem var(--font);
-    --header-2: 600 1.25rem var(--font);
-  }
-}
-
-@media screen and (max-width: 500px) {
-  :root {
-    --header-1: 600 1.5rem/3.25rem var(--font);
-    --header-3: 600 1rem var(--font);
-  }
+  --body: 400 0.9rem/19px var(--font);
+  --body-bold: 700 0.9rem/19px var(--font);
+  --body-small: 400 12px/14px var(--font);
 }
