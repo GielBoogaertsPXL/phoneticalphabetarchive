@@ -80,8 +80,6 @@ watch(
   },
 )
 
-console.log(Object.keys(allGraphemes).slice(0, 3))
-console.log(`prefix: /src/assets/graphemes/${alphabet.value.id}/`)
 </script>
 
 <template>
@@ -91,7 +89,7 @@ console.log(`prefix: /src/assets/graphemes/${alphabet.value.id}/`)
         <h1>{{ alphabet.title }}</h1>
         <img
           v-if="!authorError"
-          :src="`/src/assets/authors/${alphabet.id}.webp`"
+          :src="`/authors/${alphabet.id}.webp`"
           :alt="`Author of ${alphabet.title}`"
           @error="authorError = true"
           class="avatar"
