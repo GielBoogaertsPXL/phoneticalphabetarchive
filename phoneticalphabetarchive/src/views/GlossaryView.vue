@@ -1,5 +1,46 @@
-<script setup></script>
+<script setup>
+import glossary from '@/assets/glossary.json'
+import AppArticle from '@/components/AppArticle.vue'
+</script>
 
-<template></template>
+<template>
+  <main>
+    <header>
+      <h1>Glossary</h1>
+    </header>
+    <section class="glossary">
+      <AppArticle
+        v-for="item in glossary"
+        :key="item.word"
+        :word="item.word"
+        :description="item.explanation">
+      </AppArticle>
+    </section>
+  </main>
+</template>
 
-<style scoped></style>
+<style scoped>
+main {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 10rem 2rem 0;
+}
+
+header {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 8rem;
+}
+
+h1 {
+  font-size: 5vw;
+  line-height: 6vw;
+  letter-spacing: -7%;
+}
+
+.glossary {
+  margin-top: 10rem;
+}
+</style>

@@ -99,7 +99,7 @@ watch(
       <section id="info">
         <div class="information" v-for="(label, key) in infoLabels" :key="key">
           <span class="category">{{ label }}</span>
-          <p class="text">{{ alphabet.information[key] ?? alphabet[key] }}</p>
+          <p>{{ alphabet.information[key] ?? alphabet[key] }}</p>
         </div>
       </section>
 

@@ -1,0 +1,126 @@
+[
+  {
+    "word": "Phonetics",
+    "explanation": "A branch within linguistics where they study human speech sounds."
+  },
+  {
+    "word": "Phonetic alphabet",
+    "explanation": "A set of characters designed to represent human speech sounds from any language. They function as an aid for pronouncing while reading and a medium for phonetic transcription."
+  },
+  {
+    "word": "International Phonetic Alphabet or IPA",
+    "explanation": "The phonetic alphabet that is the current standard for phonetic transcription. Example: The quick brown fox jumps over the lazy dog. / ðə kwɪk bɹaʊn fɑks ʤʌmps ˈoʊvɚ ðə ˈleɪzi dɔg."
+  },
+  {
+    "word": "Writing system",
+    "explanation": "A structured method of visually representing spoken language through symbols. Examples: alphabetic, abjad, logographic, syllabaries, ..."
+  },
+  {
+    "word": "Script",
+    "explanation": "The set of symbols used within a writing system. Example: alphabetic → Latin, Cyrillic, Greek, ..."
+  },
+  {
+    "word": "Latin script",
+    "explanation": "Originally developed by the Romans, influenced by the Etruscan and Greek scripts and became the basis for a wide range of modern scripts. Today, it is the most widely used script in the world as it supports languages like English, French, Spanish... The Latin script is used in this thesis."
+  },
+  {
+    "word": "Cyrillic script",
+    "explanation": "The script used by many Slavic languages like Russian, Bulgarian, Serbian..."
+  },
+  {
+    "word": "Alphabet",
+    "explanation": "The fixed set of symbols taken from a script, which is linked to a language. Some languages use the same alphabet; others also incorporate other symbols of the same script. Example: alphabetic → Latin → Dutch alphabet."
+  },
+  {
+    "word": "Orthography",
+    "explanation": "The set of rules and principles determining how a language is written. This includes spelling, grammar, punctuation, and capitalization."
+  },
+  {
+    "word": "Convention",
+    "explanation": "An agreement or rule accepted by the users of a language or writing system."
+  },
+  {
+    "word": "Grapheme",
+    "explanation": "The smallest functioning unit in a writing system that can distinguish meaning between words. They are the visual representation of human speech sounds or phonemes. Example: in ‘word’ the ‘w’, ‘o’, ‘r’ and ‘d’ are all separate graphemes."
+  },
+  {
+    "word": "Phoneme",
+    "explanation": "The smallest functioning unit of sound in spoken language that can distinguish meaning between words. Example: the sound from the ‘o’ in ‘word’ is a phoneme."
+  },
+  {
+    "word": "Speech sound",
+    "explanation": "A physical sound produced by the vocal cords of a human."
+  },
+  {
+    "word": "Consonant",
+    "explanation": "A speech sound produced with a constriction or closure in the vocal tract. The sound is created by stopping the flow of the air in the mouth."
+  },
+  {
+    "word": "Vowel",
+    "explanation": "A speech sound produced with an open vocal tract. The sound is produced by letting the air escape the mouth in an easy fashion."
+  },
+  {
+    "word": "Monophthong",
+    "explanation": "A singular vowel sound, which can be defined as long or short depending on the duration of the airflow. Example: the ‘o’ in ‘word’ or the ‘oo’ in ‘broom’."
+  },
+  {
+    "word": "Diphthong",
+    "explanation": "A combination of two monophthongs. Example: the ‘y’ in ‘sky’, which is transcribed as ‘aɪ’."
+  },
+  {
+    "word": "Triphthong",
+    "explanation": "A combination of three monophthongs. Example: the ‘i’ in ‘fire’, which is transcribed as ‘aɪə’."
+  },
+  {
+    "word": "Speech organs",
+    "explanation": "The anatomical parts used for producing speech sounds. These include the lungs for airflow, vocal cords for trembling (voicing), tongue, lips, teeth, and mouth."
+  },
+  {
+    "word": "IPA-parameters",
+    "explanation": "The parameters used by the IPA for classifying speech sounds."
+  },
+  {
+    "word": "Raising of the tongue",
+    "explanation": "In the case of monophthongs, the raising of the tongue is classified as closed, near-closed, close-mid, mid, open-mid, near-open, or open."
+  },
+  {
+    "word": "Part of the tongue being raised",
+    "explanation": "In the case of monophthongs, the part of the tongue being raised is classified as front, central, or back."
+  },
+  {
+    "word": "Shape of the lips",
+    "explanation": "In the case of monophthongs, the shape of the lips is classified as rounded or unrounded."
+  },
+  {
+    "word": "Pulmonic consonants",
+    "explanation": "A main division of consonants where the air comes from the lungs."
+  },
+  {
+    "word": "Co-articulated consonants",
+    "explanation": "A main division of consonants involving two simultaneous places of articulation."
+  },
+  {
+    "word": "Non-pulmonic consonants",
+    "explanation": "A main division of consonants where the air does not come from the lungs."
+  },
+  {
+    "word": "Voicing or trembling",
+    "explanation": "A consonant parameter that classifies sounds as voiced or unvoiced."
+  },
+  {
+    "word": "Place of articulation",
+    "explanation": "A consonant parameter describing where in the mouth the sound is produced. The places include bilabial, labiodental, linguolabial, dental, alveolar, postalveolar, retroflex, palatal, velar, uvular, pharyngeal, and glottal."
+  },
+  {
+    "word": "Manner of articulation",
+    "explanation": "A consonant parameter describing how the air escapes the mouth. The manners include nasal, plosive, (non-)sibilant affricate, (non-)sibilant fricative, approximant, tap, trill, lateral affricate, lateral fricative, lateral approximant, and lateral tap."
+  },
+  {
+    "word": "Transparent and non-transparent language",
+    "explanation": "The regularity of grapheme-phoneme mapping. If the number of graphemes is equal to the number of phonemes, that language is deemed transparent. If the number of graphemes is lower, it means that some graphemes will have multiple phonemes, which makes the language opaque or non-transparent."
+  },
+  {
+    "word": "Auxiliary language",
+    "explanation": "A language, which is often constructed, that is used to communicate when two people speak different native languages."
+  }
+]
