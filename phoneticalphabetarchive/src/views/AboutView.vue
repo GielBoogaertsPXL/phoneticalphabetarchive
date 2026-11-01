@@ -3,21 +3,21 @@
 <template>
   <main>
     <header>
-      <h1>About the archive</h1>
+      <h1 v-reveal>About the archive</h1>
     </header>
     <section id="info">
       <div class="information">
-        <p>
+        <p v-reveal>
           My name is Giel Boogaerts. The archive stems from my master project about phonetical
           alphabets,
           <a href="https://gielboogaerts.com/work/eopa">The Encyclopedia of Phonetic Alphabets↗</a>.
         </p>
-        <p>
+        <p v-reveal="100">
           This website is a digital application of those books so all this information is available
           to everyone who is interested. It includes the entire collected archive of alphabets, each
           with contextual information and the individual graphemes.
         </p>
-        <p>
+        <p v-reveal="200">
           There is always room for more alphabets so I’m open to new additions. Just reach out and
           we’ll see how we can integrate it.
         </p>

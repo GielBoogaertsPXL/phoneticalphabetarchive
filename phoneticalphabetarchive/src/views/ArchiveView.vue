@@ -168,8 +168,9 @@ const visibleAlphabets = computed(() => {
 
       <section :class="view">
         <RouterLink
-          v-for="alphabet in visibleAlphabets"
+          v-for="(alphabet, index) in visibleAlphabets"
           :key="alphabet.id"
+          :style="{ animationDelay: `${Math.min(index, 15) * 40}ms` }"
           :to="{ name: 'alphabet', params: { id: alphabet.id } }"
         >
           <div class="left">
@@ -336,6 +337,7 @@ a {
   padding: 1.5rem 0.5rem;
   border-radius: 0.5rem;
   transition: background-color 0.4s ease;
+  animation: reveal-in 0.5s ease backwards;
 }
 
 a:hover {
@@ -483,6 +485,12 @@ h2 {
 
 .empty {
   grid-column: 1 / -1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  a {
+    animation: none;
+  }
 }
 
 @media screen and (max-width: 810px) {

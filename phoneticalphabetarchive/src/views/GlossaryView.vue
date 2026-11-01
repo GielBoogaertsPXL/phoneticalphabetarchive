@@ -6,11 +6,12 @@ import AppArticle from '@/components/AppArticle.vue'
 <template>
   <main>
     <header>
-      <h1>Glossary</h1>
+      <h1 v-reveal>Glossary</h1>
     </header>
     <section class="glossary">
       <AppArticle
         v-for="item in glossary"
+        v-reveal
         :key="item.word"
         :word="item.word"
         :description="item.explanation">

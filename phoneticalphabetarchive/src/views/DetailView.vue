@@ -84,7 +84,8 @@ watch(
 <template>
   <div id="page" v-if="alphabet">
     <main>
-      <header>
+      <RouterLink :to="{ name: 'THE PHONETIC ALPHABET ARCHIVE' }" class="back">< Back to archive</RouterLink>
+      <header v-reveal>
         <h1>{{ alphabet.title }}</h1>
         <img
           v-if="!authorError"
@@ -95,28 +96,28 @@ watch(
         />
       </header>
 
-      <div class="type">
+      <div v-reveal="100" class="type">
         <div v-if="alphabet.type?.includes('existing')" class="existing" title="Existing"></div>
         <div v-if="alphabet.type?.includes('derived')" class="derived" title="Derived"></div>
         <div v-if="alphabet.type?.includes('new')" class="new" title="New"></div>
       </div>
 
       <section id="info">
-        <div class="information" v-for="(label, key) in infoLabels" :key="key">
+        <div class="information" v-for="(label, key, i) in infoLabels" :key="key" v-reveal="i * 80">
           <span class="category">{{ label }}</span>
           <p v-html="alphabet.information[key] ?? alphabet[key]"></p>
         </div>
       </section>
 
       <section class="showcase">
-        <div class="information">
+        <div v-reveal class="information">
           <span class="category">Languages</span>
           <div class="languages">
             <span v-for="language in alphabet.language" :key="language">{{ language }}</span>
           </div>
         </div>
 
-        <div id="showcase">
+        <div id="showcase" v-reveal="100">
           <img class="showcase-img" :src="`/showcase/${alphabet.id}.svg`" :alt="alphabet.title" />
           <p>
             The quick brown fox jumps over the lazy dog. <br />
@@ -126,7 +127,7 @@ watch(
       </section>
 
       <section id="alphabet">
-        <div class="alphabet-header">
+        <div v-reveal class="alphabet-header">
           <div class="filters">
             <button :class="{ active: filter === 'all' }" @click="filter = 'all'">All</button>
             <span>/</span>
@@ -145,7 +146,8 @@ watch(
         <div class="graphemes">
           <div
             v-for="grapheme in filteredGraphemes"
-            :key="grapheme.path"
+            :key="grapheme.url"
+            v-reveal
             @click="selectedGrapheme = grapheme"
             class="grapheme"
           >
@@ -192,7 +194,7 @@ main {
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 10rem 2rem 0;
+  padding: 2rem 2rem 0;
 }
 
 header {
@@ -200,6 +202,15 @@ header {
   display: flex;
   gap: 2rem;
   margin-bottom: 2.5rem;
+}
+
+.back {
+  font: var(--body);
+  margin-bottom: 6rem;
+}
+
+.back:hover {
+  font-weight: bolder;
 }
 
 .type {

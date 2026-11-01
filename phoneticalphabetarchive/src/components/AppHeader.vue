@@ -7,7 +7,7 @@
         The phonetic alphabet archive</RouterLink
       >
     </p>
-    <nav>
+    <nav class="nav-fade">
       <RouterLink :to="{ name: 'THE PHONETIC ALPHABET ARCHIVE' }">Archive</RouterLink>
       <RouterLink :to="{ name: 'ABOUT' }">About</RouterLink>
       <RouterLink :to="{ name: 'GLOSSARY' }">Glossary</RouterLink>
@@ -30,7 +30,8 @@ nav {
   align-items: flex-end;
 }
 
-p, .logo {
+p,
+.logo {
   font: var(--body-bold);
 }
 
@@ -45,5 +46,20 @@ a {
 .router-link-active,
 a:hover {
   font: var(--body-bold);
+}
+
+/* Initial fade-in matching the 0.3s page transition */
+.nav-fade {
+  animation: fadeIn 0.3s ease 1.5s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 </style>
