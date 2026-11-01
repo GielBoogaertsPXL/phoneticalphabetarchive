@@ -6,9 +6,10 @@
     "number": 44,
     "language": ["Polish"],
     "creator": ["Jakub Parkoszowic"],
+    "type": ["existing", "derived"],
     "information": {
       "author": "Jakub Parkoszowic (?-1452) was a linguist and a professor at the Jagiellonian University.",
-      "publication": "Jakub published his proposal Traktat o ortografii polskiej for a Polish orthography reform in 1440. During that time Poland was in the midst of the Jagiellonian Era. This period is often seen as one of political power and stability, marked by great prosperity, and in its later stages, a Golden Age of Polish culture.",
+      "publication": "Jakub published his proposal <i>Traktat o ortografii polskiej</i> for a Polish orthography reform in 1440. During that time Poland was in the midst of the Jagiellonian Era. This period is often seen as one of political power and stability, marked by great prosperity, and in its later stages, a Golden Age of Polish culture.",
       "motivation": "He sought to standardize the Polish written language and developed new characters to represent specific Polish sounds that could not be conveyed using Latin letters.",
       "system": "Jakub introduced the use of double vowels to indicate vowel length and coined the terms dürum and molde, meaning “hard” and “soft” respectively. The dürum letters featured more angular shapes to visually convey the hardness of their sounds. In addition, he devised new characters to represent Polish phonemes that could not be captured by existing Latin letters, ultimately creating a system with 44 distinct graphemes.",
       "longevity": "Despite his efforts, his proposal ultimately failed to gain the necessary support, and over time, interest in his work waned. The manuscript, once considered a potential breakthrough, was subsequently neglected and eventually lost to history. It remained forgotten for decades, only to be rediscovered in 1830."
@@ -21,9 +22,10 @@
     "number": 51,
     "language": ["Polish"],
     "creator": ["Stanisław Murzynowski"],
+    "type": ["existing", "derived"],
     "information": {
       "author": "Stanisław Murzynowski (1527-1553) was a Polish writer, translator, and Lutheran activist during the Protestant Reformation. He is known for being the author of the first complete translation of the New Testament into Polish, though he was not given credit, possibly due to his young age.",
-      "publication": "When he published his proposal Ortografija Polska in 1551, it was in response to previous reforms, and Poland was in the later stages of the Jagiellonian Era, or the Golden Age of Polish culture.",
+      "publication": "When he published his proposal <i>Ortografija Polska</i> in 1551, it was in response to previous reforms, and Poland was in the later stages of the Jagiellonian Era, or the Golden Age of Polish culture.",
       "motivation": "He wanted to standardize Polish orthography as the Latin alphabet did not support the Polish sounds.",
       "system": "He employed diacritical marks to represent long vowels and palatalized consonants, aiming to capture the nuances of spoken language more accurately. Through this meticulous approach, he eventually devised an entirely new writing system composed of 51 distinct characters. This comprehensive alphabet was a significant departure from previous scripts and reflected his deep commitment to linguistic precision and reform.",
       "longevity": "As linguistic trends evolved and new scholarly and political influences emerged, many aspects of his system—along with those of other contemporary orthographic standards—were gradually abandoned or replaced. Over time, these earlier efforts gave way to more modern approaches to Polish spelling and grammar, reflecting the dynamic nature of the language and its ongoing development."
@@ -36,9 +38,10 @@
     "number": 26,
     "language": ["English"],
     "creator": ["Benjamin Franklin"],
+    "type": ["existing", "derived"],
     "information": {
       "author": "Benjamin Franklin (1706-1790) was a writer, scientist, inventor, statesman, diplomat, printer, publisher, and political philosopher. He was also one of the founding fathers of the United States and a drafter and signer of the Declaration of Independence.",
-      "publication": "He created the alphabet in 1768 but published it in his Political, Miscellaneous, and Philosophical Pieces in 1779. By this time, the Civil War was nearly ending. The idea of a new national language for an emerging country seemed like a natural progression during this period.",
+      "publication": "He created the alphabet in 1768 but published it in his <i>Political, Miscellaneous, and Philosophical Pieces</i> in 1779. By this time, the Civil War was nearly ending. The idea of a new national language for an emerging country seemed like a natural progression during this period.",
       "motivation": "He sought to reform English spelling, giving it a more natural order. His goal was to better reflect pronunciation and reduce poor spelling among the general population.",
       "system": "Franklin proposed eliminating six consonants—c, q, x, w, y, and u—which he considered redundant, as their sounds could be represented by other letters. In their place, he introduced two new vowels and four additional graphemes to represent common digraphs. One of the new consonants served as a replacement for j. When preceded by d, it produced the sounds of j and soft g; when preceded by t, it created the ch sound. This removed the ambiguity of the letter g. To indicate vowel length, Franklin proposed using double letters for long vowels.",
       "longevity": "There were several concerns with Franklin’s alphabet, including the fear that it would erase the etymological roots of words and that it wouldn’t be able to distinguish words with similar sounds but different meanings. Biographer Walter Isaacson noted that Franklin’s passion for social reform led him to extremes with this project. Although the alphabet was never widely adopted, it did inspire Noah Webster, a key figure in American spelling reform."
@@ -51,9 +54,10 @@
     "number": 40,
     "language": ["English"],
     "creator": ["Thomas Spence"],
+    "type": ["existing", "derived"],
     "information": {
       "author": "Thomas Spence (1750-1814) was an English radical, advocating for the common ownership of land and democratic equality between the sexes.",
-      "publication": "When he published his alphabet in The Grand Repository of the English Language in 1775, there were numerous socio-linguistic reform movements taking place. The American Revolution had just begun, and a few years earlier, the Industrial Revolution had taken root in England.",
+      "publication": "When he published his alphabet in <i>The Grand Repository of the English Language</i> in 1775, there were numerous socio-linguistic reform movements taking place. The American Revolution had just begun, and a few years earlier, the Industrial Revolution had taken root in England.",
       "motivation": "Given that his political philosophy emphasized equality and unity among the people, it is understandable that he would support the creation of a new, standardized system of English spelling—one that aimed to simplify written language and make it more accessible to all, regardless of education or social class.",
       "system": "He chose to base his system on the Latin alphabet and designed it to use almost exclusively capital letters, giving the script a uniform and bold appearance. For the additional characters, Spence created ligature-like forms by creatively combining existing Latin letters. These new characters were intended for English diphthongs and other sounds that had no clear equivalent in English spelling.",
       "longevity": "The alphabet ultimately failed to gain traction among the general public. Even individuals who supported his political ideals viewed the system as impractical—considering it a needlessly complex and cumbersome method of spelling and writing that offered little advantage over the traditional orthography."
@@ -66,9 +70,10 @@
     "number": 40,
     "language": ["English"],
     "creator": ["Michael H. Barton"],
+    "type": ["existing", "derived", "new"],
     "information": {
       "author": "Michael H. Barton was an American author.",
-      "publication": "Although he developed his alphabet roughly a decade earlier, it wasn’t until 1833 that he made it public with the publication of Something New: Comprising a New and Perfect Alphabet. This work formally introduced his proposed system and outlined its potential benefits for simplifying and standardizing English spelling.",
+      "publication": "Although he developed his alphabet roughly a decade earlier, it wasn’t until 1833 that he made it public with the publication of <i>Something New: Comprising a New and Perfect Alphabet</i>. This work formally introduced his proposed system and outlined its potential benefits for simplifying and standardizing English spelling.",
       "motivation": "He sought to replace what he described as the “erroneous and tedious” system of instruction then in use, aiming instead to create a more logical and efficient approach to learning. One of his key goals was to simplify the process of acquiring foreign languages, making linguistic education more accessible and less burdensome for learners.",
       "system": "Each character in the system corresponds to one of the 40 distinct sounds in the English language, ensuring a one-to-one relationship between sound and symbol. All of the characters are rendered in a handwritten, italic style, giving the script a consistent and flowing appearance. He then also recycled letters by rotating them 180 degrees.",
       "longevity": "He tested the alphabet in 1821 at a school he opened himself. As a result, both French and English-speaking uneducated men were able to learn to read and write within thirty days. However, he faced significant backlash, particularly due to the fact that the alphabet was written in italic script, making it difficult to distinguish between characters. This led Barton to suspend his work."
@@ -81,9 +86,10 @@
     "number": 35,
     "language": ["English"],
     "creator": ["Bartłomiej Beniowski"],
+    "type": ["existing"],
     "information": {
       "author": "Bartłomiej Beniowski (1800-1867) was a doctor, a major in the Polish army, and a participant in the November Rebellion.",
-      "publication": "He published his proposed alphabet in 1844 under the name Anti-Absurd or Phrenotypic Alphabet and Orthography for the English Language. In this work, he outlined his vision for a more rational and phonetic spelling system, aiming to reform English orthography.",
+      "publication": "He published his proposed alphabet in 1844 under the name <i>Anti-Absurd or Phrenotypic Alphabet and Orthography for the English Language</i>. In this work, he outlined his vision for a more rational and phonetic spelling system, aiming to reform English orthography.",
       "motivation": "As an activist involved in radical emigration movements, he was committed to social reform and educational accessibility. In line with these ideals, he aimed to introduce a clear and simplified orthography into the English language, with the goal of removing many of the inconsistencies and complexities that made English difficult to learn—particularly for immigrants and non-native speakers.",
       "system": "He exclusively used letters from the Latin alphabet, creatively repurposing them by rotating certain characters 180 degrees to represent additional sounds. This approach allowed him to maintain a visual and structural resemblance to traditional English spelling, making the system feel more familiar despite its innovations.",
       "longevity": "There is no documented evidence of the alphabet being adopted for any official or practical use."
@@ -96,9 +102,10 @@
     "number": 40,
     "language": ["English"],
     "creator": ["Sir Isaac Pitman", "Alexander John Ellis"],
+    "type": ["existing", "derived", "new"],
     "information": {
       "author": "Sir Isaac Pitman (1813-1897) was an English publisher and teacher of the English language, while Alexander John Ellis (1814-1890) was an English mathematician, philologist, and early phonetician.",
-      "publication": "They introduced their new alphabet in The Phonotypic Journal in 1845, during a period of growing interest and public discourse around spelling reform.",
+      "publication": "They introduced their new alphabet in <i>The Phonotypic Journal</i> in 1845, during a period of growing interest and public discourse around spelling reform.",
       "motivation": "They developed the alphabet to address the inconsistencies and complexities of English orthography, with the primary goal of improving literacy by making reading and writing more accessible. Over time, it became clear that their system could also function as a transitional tool—helping learners gradually move from a phonetic spelling approach to mastering traditional English orthography.",
       "system": "Beginning with the Latin alphabet as a foundation, they introduced additional letters to represent specific English sounds more accurately. Rather than relying on double vowels to indicate vowel length or quality, they designed entirely new characters for these sounds. This approach led to the creation of a phonetic alphabet consisting of 40 distinct characters, each corresponding to a unique sound in English.",
       "longevity": "After mastering reading and writing in the new alphabet, students found it relatively easy to transfer their literacy skills to traditional English orthography. Although the system never achieved widespread adoption, it played an influential role in the evolution of phonetic transcription. Notably, it contributed to the development of the International Phonetic Alphabet and inspired several variants and adaptations over time."
@@ -111,9 +118,10 @@
     "number": 53,
     "language": ["African", "Hieroglyphics"],
     "creator": ["Karl Richard Lepsius"],
+    "type": ["existing", "derived"],
     "information": {
       "author": "Karl Richard Lepsius (1810-1884) was a German Egyptologist, linguist, and archaeologist.",
-      "publication": "He first employed the alphabet in his 1849 work Denkmäler aus Ägypten und Äthiopien, where he used it to transcribe ancient Egyptian hieroglyphs. This marked its initial practical application, demonstrating the system’s potential for accurately representing non-Latin scripts in scholarly research.",
+      "publication": "He first employed the alphabet in his 1849 work <i>Denkmäler aus Ägypten und Äthiopien</i>, where he used it to transcribe ancient Egyptian hieroglyphs. This marked its initial practical application, demonstrating the system’s potential for accurately representing non-Latin scripts in scholarly research.",
       "motivation": "Initially, he used the alphabet to transcribe hieroglyphics in his Denkmäler aus Ägypten und Äthiopien and later extended it to write mostly African and non-European languages that did not yet have a script.",
       "system": "He utilized the Latin alphabet, supplemented with diacritical marks, to distinguish the diverse range of sounds found in African languages. This approach allowed for a more precise and systematic representation of phonetic variations that were not present in European languages, making the transcription of African languages more accurate and accessible for linguistic study.",
       "longevity": "The alphabet was praised for its comprehensive coverage of sounds. However, it was also criticized for its complexity, largely due to the extensive use of diacritical marks, which made it challenging to learn and use efficiently."
@@ -126,6 +134,7 @@
     "number": 40,
     "language": ["English"],
     "creator": ["George D. Watt"],
+    "type": ["derived", "new"],
     "information": {
       "author": "George D. Watt (1812-1881) was an American stenographer. He developed the alphabet on the instructions of Brigham Young, the president of the Church of Jesus Christ of Latter-Day Saints in Utah, who was interested in spelling reform.",
       "publication": "The alphabet was published in 1854. During this time, industrialization and the transportation revolution, including the expansion of the railroad, were transforming the economy in America. This period also saw a large wave of immigration from Western Europe.",
@@ -141,9 +150,10 @@
     "number": 39,
     "language": ["Danish"],
     "creator": ["Kristen Jensen Lyngby"],
+    "type": ["existing", "derived"],
     "information": {
       "author": "Kristen Jensen Lyngby (1829–1871) was a Danish linguist and teacher of language history. He was the founder of Danish Dialectology and one of the founders of the Danish Philological Society.",
-      "publication": "He published his alphabet in Bidrag til en sønderjysk sproglære in 1858, drawing extensively from his fieldwork. This period was marked by national-romantic movements that inspired linguists to study the Danish language as a vital element of national identity and cultural heritage.",
+      "publication": "He published his alphabet in <i>Bidrag til en sønderjysk sproglære</i> in 1858, drawing extensively from his fieldwork. This period was marked by national-romantic movements that inspired linguists to study the Danish language as a vital element of national identity and cultural heritage.",
       "motivation": "Bidrag til en sønderjysk spro-glære was a comprehensive field study focused on documenting and preserving Danish dialects, particularly those spoken in the Sønderjysk region. In addition to its dialectal research, the work also explored the linguistic relationship between German and Danish, examining the similarities and variations within the two languages and their dialects.",
       "system": "He employed the Latin alphabet augmented with additional diacritical marks to clearly differentiate between the various sounds he deemed important. This approach led to the creation of an alphabet consisting of 39 distinct characters, each representing a unique phonetic element.",
       "longevity": "His work had a significant impact on the methods used for collecting linguistic data in future dialect research, shaping the field of Danish dialectology as a whole. It is widely regarded as one of the most important and foundational dialect studies in both Denmark and the broader Scandinavian region."
@@ -156,9 +166,10 @@
     "number": 94,
     "language": ["Universal"],
     "creator": ["Alexander Melville Bell"],
+    "type": ["new"],
     "information": {
       "author": "Alexander Melville Bell (1819-1905) was a British linguist and teacher. He was also the father of Alexander Graham Bell, the inventor of the telephone.",
-      "publication": "He published his alphabet in Visible Speech: The Science of Universal Alphabetics in 1867. During the Victorian Era, there were many reform and improvement movements aimed at both individuals and society. Education was considered vital, creating a demand for greater accessibility.",
+      "publication": "He published his alphabet in <i>Visible Speech: The Science of Universal Alphabetics</i> in 1867. During the Victorian Era, there were many reform and improvement movements aimed at both individuals and society. Education was considered vital, creating a demand for greater accessibility.",
       "motivation": "He developed the alphabet specifically to assist deaf individuals in learning and enhancing their speech skills, aiming to provide a more effective tool for communication and language acquisition.",
       "system": "The alphabet reflected the position of the speech organs during sound production, showing the movements of the throat, tongue, and lips. For vowels, tongue height is indicated by the character’s outer ends—top for close, bottom for open, and both for mid. A line through the middle marks rounded vowels. For consonants, the place of articulation is shown by the shape, and the manner by the character’s orientation. Voiced consonants have an added line in the middle. Smaller characters represent glides, which combine with vowels to form diphthongs. ",
       "longevity": "It was used as a universal language worldwide and was promoted at the Second International Congress on Education of the Deaf in 1880. However, by the 1890s, it was found to be more of a hindrance compared to other methods and gradually faded from use."
@@ -171,6 +182,7 @@
     "number": 92,
     "language": ["English"],
     "creator": ["Alexander John Ellis"],
+    "type": ["existing"],
     "information": {
       "author": "Alexander John Ellis (1814-1890) was an English mathematician, philologist, and early phonetician.",
       "publication": "In 1869, he published his alphabet alongside the chart used for Bell’s Visible Speech, providing a direct comparison of the sounds represented in both systems. This allowed for a clearer understanding of how his alphabet approached the different sounds.",
@@ -186,9 +198,10 @@
     "number": 81,
     "language": ["English", "French", "German", "Norwegian", "Swedish", "Welsh", "Portugese"],
     "creator": ["Henry Sweet"],
+    "type": ["existing"],
     "information": {
       "author": "Henry Sweet (1845-1912) was an English philologist, phonetician and grammarian.",
-      "publication": "He published his alphabet in 1877 as part of his Handbook of Phonetics, presenting a systematic approach to phonetic transcription and laying the groundwork for future linguistic studies.",
+      "publication": "He published his alphabet in 1877 as part of his <i>Handbook of Phonetics</i>, presenting a systematic approach to phonetic transcription and laying the groundwork for future linguistic studies.",
       "motivation": "He developed the alphabet with the goal of accurately transcribing spoken sounds, ensuring a precise and consistent representation of speech in written form.",
       "system": "The alphabet was based on Ellis’ Palaeotype Alphabet and Pitman’s Phonotypic Alphabet. It came in two versions: Broad Romic and Narrow Romic. Narrow Romic employed italics to capture subtle distinctions in speech sounds, providing a more detailed phonetic transcription. In contrast, Broad Romic was less specific, focusing on a more general representation of sounds. He opted for existing letters so no new letters needed to be casted for the alphabet.",
       "longevity": "It played a significant role in shaping the development of the now-standard International Phonetic Alphabet, contributing key ideas and symbols that helped establish a universal system for phonetic transcription."
@@ -201,9 +214,10 @@
     "number": 93,
     "language": ["Swedish"],
     "creator": ["Johan August Lundell"],
+    "type": ["existing", "derived", "new"],
     "information": {
       "author": "Johan August Lundell (1851-1940) was Swedish linguist and professor of Slavic languages at Uppsala University",
-      "publication": "He published his alphabet in De Svenska Landsmålen in 1878, providing a detailed framework for the phonetic transcription of Swedish dialects and contributing significantly to Scandinavian linguistic research.",
+      "publication": "He published his alphabet in <i>De Svenska Landsmålen</i> in 1878, providing a detailed framework for the phonetic transcription of Swedish dialects and contributing significantly to Scandinavian linguistic research.",
       "motivation": "He created the alphabet specifically to accurately transcribe the speech sounds of Swedish dialects encountered in his study, ensuring a precise and detailed representation of their phonetic variations.",
       "system": "He incorporated characters from Latin, Greek, and Cyrillic alphabets, modifying them to capture subtle distinctions between speech sounds. The original alphabet consisted of 93 characters but has since grown to include over 200 symbols, reflecting its increasing complexity and precision in phonetic transcription.",
       "longevity": "The system was widely adopted by other experts in the field and has become a standard tool among dialectologists and linguists in Sweden and Finland. It has been extensively used for transcribing, analyzing, and documenting the rich variety of Swedish dialects, playing a crucial role in preserving and studying regional linguistic diversity."
@@ -216,9 +230,10 @@
     "number": 30,
     "language": ["Auxiliary"],
     "creator": ["Johann Martin Schleyer"],
+    "type": ["existing", "derived"],
     "information": {
       "author": "Johann Martin Schleyer (1831-1912) was a German Catholic priest, linguist and writer.",
-      "publication": "He published his proposal and alphabet in Volapük, die Weltsprache: Entwurf einer Universalsprache für alle Gebildete der ganzen Erde in 1880, outlining the structure and purpose of his constructed universal language. This publication marked the formal introduction of Volapük, including its phonetic system and grammatical foundations.",
+      "publication": "He published his proposal and alphabet in <i>Volapük, die Weltsprache: Entwurf einer Universalsprache für alle Gebildete der ganzen Erde</i> in 1880, outlining the structure and purpose of his constructed universal language. This publication marked the formal introduction of Volapük, including its phonetic system and grammatical foundations.",
       "motivation": "He claimed that the inspiration to create a universal language came to him in a dream, during which God Himself assigned him the task. This divine calling became the foundation for his commitment to developing a language that could unite people across linguistic and cultural boundaries.",
       "system": "He based his system on the Latin alphabet, supplementing it with diacritical marks and inventing additional letters to represent specific sounds, resulting in a total of 30 characters. The vocabulary was primarily derived from English, with secondary influences from French, German, and Latin, reflecting a blend of familiar linguistic roots intended to enhance accessibility for a broad international audience.",
       "longevity": "The language enjoyed immense popularity for nearly a decade, attracting hundreds of thousands of users worldwide. However, its prominence eventually declined as it was gradually supplanted by the next major auxiliary language, Esperanto, which offered a more streamlined and accessible alternative."
@@ -231,9 +246,10 @@
     "number": 97,
     "language": ["Norwegian"],
     "creator": ["Johan Fredrik Breda Storm"],
+    "type": ["existing", "derived"],
     "information": {
       "author": "Johan Fredrik Breda Storm (1836-1920) was a Norwegian professor of English language, linguist and philologist.",
-      "publication": "He published his transcription system in Norvegia: Norsk Lydskrift med Omrids av Fonetiken in 1884, presenting a detailed phonetic alphabet designed to accurately represent the sounds of Norwegian for linguistic and dialectological research.",
+      "publication": "He published his transcription system in <i>Norvegia: Norsk Lydskrift med Omrids av Fonetiken</i> in 1884, presenting a detailed phonetic alphabet designed to accurately represent the sounds of Norwegian for linguistic and dialectological research.",
       "motivation": "He developed the alphabet to more accurately represent Norwegian speech sounds, aiming to support dialectological studies with a precise and consistent phonetic transcription system.",
       "system": "He used Latin letters as a base, modifying several of them and incorporating various types of diacritics to capture subtle distinctions in pronunciation. The resulting alphabet consisted of approximately 97 characters, allowing for detailed and nuanced phonetic transcription.",
       "longevity": "Norvegia was primarily developed for use in dialectological research and has remained a valuable tool in the field. It continues to be used in the teaching of Scandinavian studies at Norwegian universities, particularly for phonetic transcription and the analysis of regional speech patterns."
@@ -245,7 +261,8 @@
     "year": 1886,
     "number": 240,
     "language": ["Universal"],
-    "creator": ["International Phonetic Association","Paul Passy"],
+    "creator": ["International Phonetic Association", "Paul Passy"],
+    "type": ["existing", "derived", "new"],
     "information": {
       "author": "The International Phonetic Association was founded by a group of French and English linguists, led by Paul Passy (1859–1940), a French linguist. The idea for the association and its phonetic alphabet was originally suggested by Otto Jespersen (1860–1943), a Danish linguist specializing in English grammar.",
       "publication": "The alphabet was officially published in 1886 in the journal of the International Phonetic Teachers Association, marking an important milestone in the dissemination and standardization of phonetic transcription.",
@@ -261,9 +278,10 @@
     "number": 28,
     "language": ["Auxiliary"],
     "creator": ["Ludwik Lejzer Zamenhof"],
+    "type": ["existing"],
     "information": {
       "author": "Ludwik Lejzer Zamenhof (1859-1917) was a Polish ophthalmologist. ",
-      "publication": "He published his language in 1887 under the pseudonym Dr. Esperanto, in Internacia Lingvo – Antaŭparolo kaj Plena Lernolibro. This publication served as both an introduction and a complete textbook for learning the new international language he had created.",
+      "publication": "He published his language in 1887 under the pseudonym Dr. Esperanto, in <i>Internacia Lingvo – Antaŭparolo kaj Plena Lernolibro</i>. This publication served as both an introduction and a complete textbook for learning the new international language he had created.",
       "motivation": "He grew up deeply fascinated by the vision of a world without war and came to believe that such harmony could be fostered through the creation of a new international auxiliary language—one that would bridge linguistic divides and promote mutual understanding among people of different nations.",
       "system": "He based the language on the Latin alphabet, supplementing it with a few diacritics and letter combinations to represent additional sounds. The language was designed with simplicity in mind, featuring only 16 grammatical rules. Its vocabulary and grammar were primarily influenced by European languages, including English, German, and Polish.",
       "longevity": "Esperanto achieved considerable success, gaining recognition for its practicality and ease of use. It was approved for use in telegraph communication and actively promoted by a number of spiritual and intellectual leaders. At one point, there was even a proposal to adopt it as the common working language of the League of Nations, though the initiative was ultimately vetoed by France. Despite its widespread appeal, Esperanto faced criticism for its Eurocentric nature, as it relied on the Latin alphabet and drew heavily from European languages like English, German, and Polish in both vocabulary and grammar."
@@ -276,9 +294,10 @@
     "number": 94,
     "language": ["Danish"],
     "creator": ["Otto Jespersen"],
+    "type": ["existing", "derived"],
     "information": {
       "author": "Otto Jespersen (1860–1943) was a Danish linguist specializing in English grammar.",
-      "publication": "The alphabet was published in 1890 in the magazine Dania, Tidsskrift for Folkemål og Folkeminder, a journal dedicated to dialects and folklore. This marked its formal introduction as a tool for documenting and studying regional language varieties.",
+      "publication": "The alphabet was published in 1890 in the magazine <i>Dania, Tidsskrift for Folkemål og Folkeminder</i>, a journal dedicated to dialects and folklore. This marked its formal introduction as a tool for documenting and studying regional language varieties.",
       "motivation": "While working on the fifth volume of the magazine, he recognized the need for a consistent system of symbols to represent syntactic analysis, prompting him to develop a set of notational tools suited for linguistic structure and sentence parsing.",
       "system": "He used Latin letters as a foundation, modifying them to reflect distinctions in sound. This approach led to the creation of 94 characters, allowing for detailed and precise phonetic transcription.",
       "longevity": "Dania was employed in major philological works and became a trusted tool for linguistic research. It is still in use today for transcribing the Danish language, particularly in academic and dialectological studies."
@@ -291,9 +310,10 @@
     "number": 64,
     "language": ["German"],
     "creator": ["Otto Bremer"],
+    "type": ["existing", "derived", "new"],
     "information": {
       "author": "Otto Bremer (1867-1951) was a German-American banker and philantropist.",
-      "publication": "The alphabet was published in Deutsche Phonetik in 1893, marking its formal introduction as a tool for the phonetic study of the German language and its dialects.",
+      "publication": "The alphabet was published in <i>Deutsche Phonetik</i> in 1893, marking its formal introduction as a tool for the phonetic study of the German language and its dialects.",
       "motivation": "While working on a volume of the magazine, he came to see the necessity of a clear and consistent system of symbols to represent syntactic analysis, leading him to develop a notation method suited for illustrating grammatical structure and relationships within sentences.\n",
       "system": "He based the alphabet on Latin letters, modifying their shapes to reflect different sounds while making minimal use of diacritics. The resulting system consisted of 64 characters, designed to provide a clear and streamlined approach to phonetic transcription.\n",
       "longevity": "The alphabet was primarily used in studies of German dialects, and a revised version later served as the basis for Sammlung kurzer Grammatiken deutscher Mundarten, a collection of concise grammars of German dialects edited by Bremer himself. However, the system faced limitations when applied to other languages, and as a result, its usefulness remained largely confined to German linguistic research.\n"
@@ -306,9 +326,10 @@
     "number": 130,
     "language": ["Finnish", "Hungarian", "Eastern European dialects"],
     "creator": ["Eemil Nestor Setälä"],
+    "type": ["existing", "derived", "new"],
     "information": {
       "author": "Eemil Nestor Setälä (1864-1935) was a Finnish politician, linguist and professor in Finnish language as well as author of the Finnish Declaration of Independence.",
-      "publication": "The alphabet was published in Über Transskription der Finnisch-Ugrischen Sprachen in 1901, where it was introduced as a system specifically designed for the accurate transcription of Finno-Ugric languages.",
+      "publication": "The alphabet was published in <i>Über Transskription der Finnisch-Ugrischen Sprachen</i> in 1901, where it was introduced as a system specifically designed for the accurate transcription of Finno-Ugric languages.",
       "motivation": "He developed the alphabet for the transcription and historical reconstruction of Uralic languages, aiming to accurately represent their phonetic and phonological features across various dialects and stages of development.",
       "system": "The basic characters of the alphabet closely follow Finnish orthography to maintain familiarity and ease of use. To cover a wider range of sounds, it also incorporates characters from the Greek and Cyrillic alphabets. Instead of using numerous diacritics, the system employs italic and bold variations of letters to indicate subtle phonetic distinctions. Altogether, the alphabet consists of approximately 130 characters, providing a comprehensive tool for accurate transcription.",
       "longevity": "After undergoing some modifications in the 1970s, the alphabet continues to be used today for transcribing Uralic languages, maintaining its relevance and effectiveness in linguistic research."
@@ -321,9 +342,10 @@
     "number": 58,
     "language": ["English"],
     "creator": ["Robert Bridges"],
+    "type": ["existing", "derived"],
     "information": {
       "author": "Robert Bridges (1844-1930) was an English poet, playwriter and founder of the Society for Pure English.",
-      "publication": "He published the alphabet in his essay On the Present State of English Pronunciation in 1913.",
+      "publication": "He published the alphabet in his essay <i>On the Present State of English Pronunciation</i> in 1913.",
       "motivation": "He wanted a ‘better’ standard for pronunciation in English.",
       "system": "He used letterforms from fonts he had previously used for Old English at Oxford University as the basis for his characters. This resulted in 58 characters. Additionally, he proposed a simplified spelling system to align with the new alphabet. ",
       "longevity": "Although the alphabet was never officially adopted, Oxford University Press published seven volumes of his essays and papers using it."
@@ -336,9 +358,10 @@
     "number": 84,
     "language": ["Spanish"],
     "creator": ["Tomás Navarro Tomás"],
+    "type": ["existing", "derived"],
     "information": {
       "author": "Tomás Navarro Tomás (1884-1979) was a Spanish philologist, linguist, librarian and founder of the North American Academy of the Spanish Language.",
-      "publication": "He published the alphabet in 1915 in the Revista de Filología Española, a prominent journal of philology, introducing it as a tool for the precise transcription of Spanish dialects and historical linguistic studies.",
+      "publication": "He published the alphabet in 1915 in the <i>Revista de Filología Española</i>, a prominent journal of philology, introducing it as a tool for the precise transcription of Spanish dialects and historical linguistic studies.",
       "motivation": "He created the alphabet as a practical tool for collecting and publishing linguistic data, aiming to ensure consistency and accuracy in the documentation of spoken language.",
       "system": "He based the system on the Latin alphabet, reusing and modifying letter shapes to represent subtle sound distinctions. To enhance precision, he also incorporated several diacritics. Altogether, the alphabet comprised approximately 84 characters, allowing for detailed phonetic transcription.",
       "longevity": "The alphabet was adopted by the Centro de Estudios Históricos and has since been used in various works centered on Hispanic themes, as well as in phonetics manuals. It remains in use today and is taught at universities across the Spanish-speaking world, particularly in courses related to linguistics and phonetic transcription."
@@ -351,9 +374,10 @@
     "number": 78,
     "language": ["German"],
     "creator": ["Walter Porstmann"],
+    "type": ["new"],
     "information": {
       "author": "Walter Porstmann (1886-1959) was a German mathematician, engineer and the creator of the format A4.",
-      "publication": "He published his proposal in his 1920 book Sprache und Schrift, where he outlined his ideas for a more logical and efficient relationship between spoken language and its written form.",
+      "publication": "He published his proposal in his 1920 book <i>Sprache und Schrift</i>, where he outlined his ideas for a more logical and efficient relationship between spoken language and its written form.",
       "motivation": "He sought to reform the long-standing rule established under German Emperor Maximilian in the 16th century, which required all nouns to begin with a capital letter. He argued that the gap between spoken and written German had become overly technical and inefficient. By introducing a purely phonetic alphabet, he believed education could be significantly accelerated, freeing up time and mental resources for the advancement of science and other fields.",
       "system": "He introduced entirely new character shapes, designed to visually represent distinctions in tone, length, voicing, and strength. In his system, a voiced consonant is longer in duration than its unvoiced counterpart, and the same principle applies to rounded versus unrounded vowels. Additionally, consonants that share the same manner of articulation were given similar shapes, reinforcing phonetic relationships through visual form.",
       "longevity": "Although his alphabet was never officially adopted, it had a significant impact on the typographic reform movement within the Bauhaus. His ideas influenced key figures such as Jan Tschichold, who stated that future developments in German orthography should be based on Porstmann’s concepts, recognizing the clarity and logic of his approach to written language."
@@ -366,9 +390,10 @@
     "number": 26,
     "language": ["German"],
     "creator": ["Herbert Bayer"],
+    "type": ["existing"],
     "information": {
       "author": "Herbert Bayer (1900-1985) was an Austrian and American graphic designer, painter, photographer, sculptor, art director, environmental and interior designer, and architect.",
-      "publication": "He published his experiment in Proposal for a Universal Typeface in 1925, presenting his vision for a streamlined and functionally designed alphabet that aligned with modernist principles of clarity, efficiency, and universality.",
+      "publication": "He published his experiment in <i>Proposal for a Universal Typeface</i> in 1925, presenting his vision for a streamlined and functionally designed alphabet that aligned with modernist principles of clarity, efficiency, and universality.",
       "motivation": "He experimented with creating a universal typeface intended for a global language, drawing inspiration from the Bauhaus ideology, which emphasized functionality, simplicity, and the unification of art and technology.",
       "system": "He removed the ornamental elements from traditional Fraktur letters, transforming them into a minimalist and geometric typeface. The central principle of his alphabet was the complete elimination of capital letters, aiming for simplicity and uniformity in written text.",
       "longevity": "The alphabet remained purely experimental and was never produced as a physical typeface or cast into actual printing fonts."
@@ -381,9 +406,10 @@
     "number": 26,
     "language": ["Any language using the Latin alphabet"],
     "creator": ["Kurt Schwitters"],
+    "type": ["existing"],
     "information": {
       "author": "Kurt Schwitters (1887-1948) was a German artist and graphic designer who was part of the Bauhaus movement.",
-      "publication": "He published his alphabet in a journal in 1927, accompanied by his paper Anregungen zur Erlangung einer Systemschrift, where he outlined his ideas and motivations for creating a systematic and efficient writing system.",
+      "publication": "He published his alphabet in a journal in 1927, accompanied by his paper <i>Anregungen zur Erlangung einer Systemschrift</i>, where he outlined his ideas and motivations for creating a systematic and efficient writing system.",
       "motivation": "He created the alphabet in the spirit of orthographic reforms and the Bauhaus ideology, emphasizing simplicity, functionality, and clarity in written communication.",
       "system": "It was a geometric, sans-serif typeface rooted in the Latin alphabet that completely excluded capital letters. Vowels were distinguished by their boldness, curvier shapes, and slightly wider forms, whereas consonants were designed to be thinner, more angular, and narrower, creating a clear visual contrast between the two.",
       "longevity": "The alphabet remained purely experimental and was never produced as a physical typeface or cast into actual printing fonts."
@@ -396,9 +422,10 @@
     "number": 37,
     "language": ["German"],
     "creator": ["Kurt Schwitters"],
+    "type": ["new"],
     "information": {
       "author": "Kurt Schwitters (1887-1948) was a German artist and graphic designer who was part of the Bauhaus movement.",
-      "publication": "He published his alphabet in a journal in 1927, accompanied by his paper Anregungen zur Erlangung einer Systemschrift, where he outlined his ideas and motivations for creating a systematic and efficient writing system.",
+      "publication": "He published his alphabet in a journal in 1927, accompanied by his paper <i>Anregungen zur Erlangung einer Systemschrift</i>, where he outlined his ideas and motivations for creating a systematic and efficient writing system.",
       "motivation": "He created the alphabet in the spirit of orthographic reforms and the Bauhaus ideology, emphasizing simplicity, functionality, and clarity in written communication.",
       "system": "The consonants were designed to visually represent vocal cord activity. Voiced consonants are bottom-heavy, indicating the involvement of the glottis, while unvoiced consonants are top-heavy. The direction of a line within each character shows the place of articulation: a line to the left indicates a sound produced at the back of the mouth, a central line represents central articulation, and a line to the right denotes articulation with the lips. For vowels, rounded ones are curved at the bottom, while unrounded ones are curved at the top. The long form of a vowel is shown as the mirrored version of its short counterpart.",
       "longevity": "The alphabet remained purely experimental and was never produced as a physical typeface or cast into actual printing fonts."
@@ -411,6 +438,7 @@
     "number": 40,
     "language": ["German"],
     "creator": ["Jan Tschichold"],
+    "type": ["existing", "derived"],
     "information": {
       "author": "Jan Tschichold (1902-1974) was a German typographer and graphic designer. He was one of the founding fathers of Die Neue Typographie.",
       "publication": "He published his alphabet in 1928, presenting it as a modern, simplified writing system built on geometric principles and phonetic clarity.",
@@ -426,6 +454,7 @@
     "number": 40,
     "language": ["English"],
     "creator": ["John R. Malone"],
+    "type": ["existing", "derived"],
     "information": {
       "author": "John R. Malone was an American economist and newspaper equipment consultant.",
       "publication": "Although he had already developed the alphabet in the 1950s, it wasn’t until 1960 that he published it, choosing the Chicago Sunday Times as the platform to introduce his system to the public.",
@@ -441,6 +470,7 @@
     "number": 152,
     "language": ["English", "Dutch", "French", "German", "Italian", "Spanish"],
     "creator": ["Peter J. Franke"],
+    "type": ["new"],
     "information": {
       "author": "Peter J. Franke was a Dutch linguist.",
       "publication": "He introduced his alphabet in the early 1960s, presenting it as a fresh approach to phonetic transcription.",
@@ -456,9 +486,10 @@
     "number": 48,
     "language": ["English"],
     "creator": ["Ronald Kingsley Read"],
+    "type": ["new"],
     "information": {
       "author": "Ronald Kingsley Read (1887-1975)  was an English former craftsman and linguist.",
-      "publication": "The alphabet was developed in 1960 and later published in 1962 through a transliteration of Bernard Shaw’s Androcles and the Lion, showcasing its practical application in representing spoken language.",
+      "publication": "The alphabet was developed in 1960 and later published in 1962 through a transliteration of Bernard Shaw’s <i>Androcles and the Lion</i>, showcasing its practical application in representing spoken language.",
       "motivation": "Read created the alphabet specifically for a competition held in honor of Bernard Shaw, who was a vocal critic of English spelling because of its inconsistency and departure from straightforward alphabetic principles.",
       "system": "The voiced consonants are considered ‘deep’ letters, extending below the baseline. Their unvoiced counterparts are mirrored or rotated versions that stand on the baseline and extend above the other characters. All other sounds are represented by ‘short’ letters. Many of the letters resemble their Latin counterparts closely enough to aid beginners’ memory, yet differ sufficiently to avoid confusion with the original letters.",
       "longevity": "The alphabet was published in Androcles and the Lion and distributed to major libraries across English-speaking countries, helping to increase its visibility and accessibility."
@@ -471,9 +502,10 @@
     "number": 44,
     "language": ["English"],
     "creator": ["Sir James Pitman"],
+    "type": ["existing", "derived"],
     "information": {
       "author": "Sir James Pitman (1901-1985) was an English publisher, senior civil servant, politician, and prominent educationalist. He was also the grandson of Sir Isaac Pitman, the creator of the English Phonotypic Alphabet.",
-      "publication": "The alphabet was created in 1960 and published in The Initial Teaching Alphabet in 1962.",
+      "publication": "The alphabet was created in 1960 and published in <i>The Initial Teaching Alphabet</i> in 1962.",
       "motivation": "It wasn’t designed as a phonetic alphabet or a tool for transcription, but rather as a practical and simplified writing system for English—specifically aimed at teaching children. It served as a transitional alphabet to help them move more easily into standard English orthography.",
       "system": "Building on the Latin alphabet, he introduced several ligature-like characters to represent complex English digraphs. This approach resulted in an alphabet consisting of 44 characters.",
       "longevity": "In 1960, the alphabet was adopted on an experimental basis in several schools in England, and three years later in the United States. It gained some popularity during that time but gradually faded out of use by the 1970s."
@@ -486,6 +518,7 @@
     "number": 50,
     "language": ["English"],
     "creator": ["DARPA"],
+    "type": ["existing"],
     "information": {
       "author": "The Defense Advanced Research Projects Agency (DARPA) is an American research and development facility responsible for developing technology for the military.",
       "publication": "The alphabet was developed and introduced in 1976, marking a significant step forward in phonetic transcription systems tailored for technological applications.",
@@ -501,9 +534,10 @@
     "number": 50,
     "language": ["English", "French", "Spanish", "German", "Italian"],
     "creator": ["Doug Ewell"],
+    "type": ["new"],
     "information": {
       "author": "The alphabet was invented by Doug Ewell.",
-      "publication": "The alphabet was made in 1980 and publised in a translation of Alice in Wonderland.",
+      "publication": "The alphabet was made in 1980 and publised in a translation of <i>Alice in Wonderland</i>.",
       "motivation": "The alphabet originally began as a personal hobby and an experiment in creating a secret writing system. Over time, however, it evolved beyond its initial purpose into a more structured phonetic alphabet.",
       "system": "The characters draw inspiration from ancient runes and are designed with a highly systematic visual structure. Each letter is composed primarily of vertical, straight lines: consonants are formed with a single vertical line, while vowels are represented by two vertical lines. Distinctions between different sounds are made through the addition of horizontal and diagonal strokes. Voiced and unvoiced consonants are crafted as mirror images of one another, creating a clear visual relationship. Diacritics are also used to mark stressed sounds, culminating in a complete alphabet consisting of 50 characters.",
       "longevity": "The alphabet was never widely adopted or integrated into everyday use. However, an interesting application of it was the publication of an edition of Alice in Wonderland entirely written using this alphabet. Despite its limited practical impact, this unique edition stands as a notable example of the alphabet’s creative potential and experimental nature."
@@ -517,6 +551,7 @@
     "number": 85,
     "language": ["Universal"],
     "creator": ["Vitaly Vetash"],
+    "type": ["new"],
     "information": {
       "author": "The alphabet was invented by Vitaly Vetash, a Russian painter and linguist.",
       "publication": "The alphabet was made in 1983.",
@@ -532,6 +567,7 @@
     "number": 32,
     "language": ["French"],
     "creator": ["Pierre Di Sciullo"],
+    "type": ["existing", "derived"],
     "information": {
       "author": "Pierre Di Sciullo (1961-present) is a French graphic and type designer and an illustrator.",
       "publication": "The alphabet was made in 1989.",
@@ -547,6 +583,7 @@
     "number": 48,
     "language": ["Universal"],
     "creator": ["ESPRIT"],
+    "type": ["existing"],
     "information": {
       "author": "An international group of phoneticians under the ESPRIT project for information technology research and development programs.",
       "publication": "The alphabet was developed in 1990.",
@@ -562,6 +599,7 @@
     "number": 44,
     "language": ["English"],
     "creator": ["Trevor Guitar"],
+    "type": ["new"],
     "information": {
       "author": " The name of the inventor is Trevor Guitar, but there is no further information.",
       "publication": "The alphabet was introduced in 1990.",
@@ -577,9 +615,10 @@
     "number": 138,
     "language": ["Universal"],
     "creator": ["Andrea Vaccari"],
+    "type": ["new"],
     "information": {
       "author": "Andrea Vaccari (1962-present) is an Italian linguist and computer scientist.",
-      "publication": "The alphabet was created in 1991 and finalized in 2018, when it was published in the book Fonic – Un alfabeto fonoanalogico e fonosimbolico.",
+      "publication": "The alphabet was created in 1991 and finalized in 2018, when it was published in the book <i>Fonic – Un alfabeto fonoanalogico e fonosimbolico</i>.",
       "motivation": "He created the alphabet for use in detailed phonetic transcription and also envisioned it as an alternative global writing system.",
       "system": "Consonants in the alphabet share a geometric structure based on their place of articulation, with the manner of articulation shown by a diacritic above the character. A small vertical line on the left marks voicing. Vowels are built from vertical and horizontal lines: tongue height is indicated by a horizontal line (top, middle, or bottom), and tongue position by a vertical line (left for front, center for central, right for back). A circle distinguishes rounded from unrounded vowels.",
       "longevity": "There is no documented evidence of the alphabet being adopted for any official or practical use."
@@ -592,6 +631,7 @@
     "number": 117,
     "language": ["Universal"],
     "creator": ["Evan Kirshenbaum"],
+    "type": ["existing"],
     "information": {
       "author": "A group of developpers under the guidance of Evan Kirshenbaum.",
       "publication": "The alphabet was developed in 1991.",
@@ -607,6 +647,7 @@
     "number": 45,
     "language": ["Universal"],
     "creator": ["Vitaly Vetash"],
+    "type": ["existing", "derived"],
     "information": {
       "author": "Vitaly Vetash is a Russian painter and linguist.",
       "publication": "The alphabet was made in the late 1999.",
@@ -622,6 +663,7 @@
     "number": 116,
     "language": ["Universal"],
     "creator": ["Musa academy"],
+    "type": ["new"],
     "information": {
       "author": "The Musa academy is a Delaware public benefit corporation which serves as a vehicle for the further development and promotion of the Musa Alphabet",
       "publication": "The alphabet was introduced in 2002.",
@@ -637,6 +679,7 @@
     "number": 86,
     "language": ["French"],
     "creator": ["Pierre Di Sciullo"],
+    "type": ["existing", "derived"],
     "information": {
       "author": "Pierre Di Sciullo (1961-present) is a French graphic and type designer and an illustrator.",
       "publication": "The alphabet was created in 2005.",
@@ -652,6 +695,7 @@
     "number": 105,
     "language": ["Universal"],
     "creator": ["DonZabu"],
+    "type": ["existing", "derived"],
     "information": {
       "author": " The name of the inventor is DonZabu, but there is no further information.",
       "publication": "The alphabet was made in 2010.",
@@ -667,6 +711,7 @@
     "number": 75,
     "language": ["Universal"],
     "creator": ["Xay Voong"],
+    "type": ["new"],
     "information": {
       "author": " The name of the inventor is Xay Voong, but there is no further information.",
       "publication": "The alphabet was made in 2012.",
@@ -682,9 +727,10 @@
     "number": 86,
     "language": ["Universal"],
     "creator": ["Snejina Sonina"],
+    "type": ["new"],
     "information": {
       "author": "Snejina Sonina is an American linguist, specialized in the French language.",
-      "publication": "She published the alphabet in 2013 in a paper titled Articulatory Phonetic Alphabet (ARTALPH).",
+      "publication": "She published the alphabet in 2013 in a paper titled <i>Articulatory Phonetic Alphabet (ARTALPH)</i>.",
       "motivation": "The alphabet was created to assist with pronunciation and to help explain the grammatical rules and conventions of language. Its design supports a clearer understanding of how sounds are formed and how they function within linguistic systems.",
       "system": "She employed computer-generated representations of the human articulatory apparatus, often rendered as stylized pictograms. Circular shapes were used to represent vowels, while angular forms denoted consonants. To specify the manner and place of articulation, additional visual cues were incorporated. In total, the system comprised 86 distinct characters.",
       "longevity": "The system was tested on a group of students and was reported to enhance their articulatory awareness. However, there appears to be no further documented use or continued application beyond this initial experiment."
@@ -697,6 +743,7 @@
     "number": 38,
     "language": ["Universal"],
     "creator": ["Pangus Hoo"],
+    "type": ["existing", "derived"],
     "information": {
       "author": "The name of the inventor is Pangus Hoo, but there is no further information.",
       "publication": "The alphabet was created in 2013.",
@@ -706,27 +753,13 @@
     }
   },
   {
-    "id": "phonobet",
-    "title": "Phonobet",
-    "year": 2025,
-    "number": 60,
-    "language": ["English", "French", "Dutch", "German", "Italian", "Portuguese", "Finnish", "Turkish"],
-    "creator": ["Walda Verbaenen"],
-    "information": {
-      "author": "Walda Verbaenen (1968-present) is a Belgian graphic designer and typographic researcher.",
-      "publication": "In 2019, she developed the first version of the alphabet specifically for Dutch sounds as part of her PhD research. Over the following years, she explored its adaptability to other languages, refining the system further. The final version was published in 2025, marking the completion of her project. ",
-      "motivation": "The alphabet was created to assist learners in acquiring accurate pronunciation across different languages. By providing a clear and consistent visual representation of sounds, it aimed to support both language education and phonetic awareness. All this while sticking true to the original orthography.\n",
-      "system": "The system modifies the Latin alphabet by stretching its letters to intuitively reflect how sounds are produced, offering a visual guide to pronunciation while maintaining the original spelling and orthographic structure of the language. As a result, some letters may represent the same sound. Additionally, the positioning of characters above or below the baseline serves to indicate stress or emphasis in speech.",
-      "longevity": "It won the Henry Van de Velde Award as a PhD project, recognizing its innovative approach to phonetic transcription and universal script design. However, it has not yet seen practical adaptation or widespread use."
-    }
-  },
-  {
     "id": "foursegmentalalphabet",
     "title": "Four Segmental Alphabet",
     "year": "–",
     "number": 224,
     "language": ["Universal"],
     "creator": ["Julius Alfred Cordova"],
+    "type": ["new"],
     "information": {
       "author": "The name of the inventor is Julius Alfred Cordova, but there is no further information.",
       "publication": "There is no recorded information on when the alphabet was created.",
@@ -742,6 +775,7 @@
     "number": 109,
     "language": ["Universal"],
     "creator": ["Christian Crowley"],
+    "type": ["new"],
     "information": {
       "author": "The name of the inventor is Christian Crowley, but there is no further information.",
       "publication": "There is no recorded information on when the alphabet was created.",
@@ -757,6 +791,7 @@
     "number": 75,
     "language": ["Universal"],
     "creator": ["Henrik Theiling"],
+    "type": ["new"],
     "information": {
       "author": "The name of the inventor Henrik Theiling, but there is no further information.",
       "publication": "There is no recorded information on when the alphabet was created.",

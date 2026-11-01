@@ -79,7 +79,6 @@ watch(
     authorError.value = false
   },
 )
-
 </script>
 
 <template>
@@ -96,10 +95,16 @@ watch(
         />
       </header>
 
+      <div class="type">
+        <div v-if="alphabet.type?.includes('existing')" class="existing" title="Existing"></div>
+        <div v-if="alphabet.type?.includes('derived')" class="derived" title="Derived"></div>
+        <div v-if="alphabet.type?.includes('new')" class="new" title="New"></div>
+      </div>
+
       <section id="info">
         <div class="information" v-for="(label, key) in infoLabels" :key="key">
           <span class="category">{{ label }}</span>
-          <p>{{ alphabet.information[key] ?? alphabet[key] }}</p>
+          <p v-html="alphabet.information[key] ?? alphabet[key]"></p>
         </div>
       </section>
 
@@ -191,15 +196,43 @@ main {
 }
 
 header {
+  width: 100%;
   display: flex;
   gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.type {
+  width: 100%;
+  display: flex;
+  gap: 0.5rem;
   margin-bottom: 8rem;
+}
+
+.existing,
+.derived,
+.new {
+  aspect-ratio: 1;
+  height: 3rem;
+}
+
+.existing {
+  background-color: #134d42;
+}
+
+.derived {
+  background-color: #31907d;
+}
+
+.new {
+  background-color: #612633;
 }
 
 h1 {
   font-size: 5vw;
   line-height: 6vw;
   letter-spacing: -7%;
+  width: fit-content;
 }
 
 .avatar {
@@ -208,16 +241,20 @@ h1 {
 
 #info {
   width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
   gap: 1.5rem;
 }
 
 .information {
-  width: 20%;
   font: var(--body);
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+.information p :deep(i) {
+  font-weight: 600;
 }
 
 .category {
@@ -242,7 +279,7 @@ h1 {
 }
 
 #showcase {
-  width: 25rem;
+  width: 35rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -287,13 +324,12 @@ button:hover {
 }
 
 .graphemes {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
   width: 100%;
 }
 
 .grapheme {
-  width: 16.666%;
   padding: 3rem 1rem;
   border-radius: 0.5rem;
   border-top: 1px solid var(--primary-color);
@@ -306,7 +342,7 @@ button:hover {
 }
 
 .grapheme img {
-  height: 4vw;
+  height: 4rem;
 }
 
 .grapheme p {
@@ -360,5 +396,53 @@ button:hover {
 
 .modal img {
   height: 40vh;
+}
+
+@media screen and (max-width: 830px) {
+  .showcase {
+    flex-direction: column;
+    gap: 8rem;
+  }
+
+  #showcase {
+    width: 32rem;
+    align-self: flex-end;
+    margin-right: 4vw;
+  }
+
+  .modal img {
+    height: 20vh;
+  }
+
+  .detail {
+    gap: 30%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    flex-direction: column;
+  }
+
+  .existing,
+  .derived,
+  .new {
+    height: 1.5rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+    line-height: 3.1rem;
+  }
+
+  .avatar {
+    height: 5rem;
+    width: fit-content;
+  }
+
+  #showcase {
+    width: 100%;
+    margin-right: 0;
+  }
 }
 </style>

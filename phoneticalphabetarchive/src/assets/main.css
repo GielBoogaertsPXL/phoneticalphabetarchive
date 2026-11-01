@@ -20,6 +20,11 @@ a:hover {
   font: var(--body-bold);
 }
 
+::selection {
+  color: white;
+  background-color: black;
+}
+
 :root {
   /* COLOR */
   --primary-color: black;

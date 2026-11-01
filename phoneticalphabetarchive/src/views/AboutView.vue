@@ -17,8 +17,6 @@
           to everyone who is interested. It includes the entire collected archive of alphabets, each
           with contextual information and the individual graphemes.
         </p>
-      </div>
-      <div class="information">
         <p>
           There is always room for more alphabets so I’m open to new additions. Just reach out and
           we’ll see how we can integrate it.
@@ -50,7 +48,7 @@ h1 {
 }
 
 p {
-  font: var(--body)
+  font: var(--body);
 }
 
 a {
@@ -59,15 +57,21 @@ a {
 
 #info {
   width: 100%;
-  display: flex;
-  gap: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
 }
 
 .information {
-  width: 30%;
   font: var(--body);
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 3rem;
+    line-height: 3.1rem;
+  }
 }
 </style>

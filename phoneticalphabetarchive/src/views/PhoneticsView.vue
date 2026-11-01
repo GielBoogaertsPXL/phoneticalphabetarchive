@@ -106,7 +106,7 @@ span {
 }
 
 .information {
-  width: 30%;
+  width: 35%;
   font: var(--body);
   display: flex;
   flex-direction: column;
@@ -117,7 +117,18 @@ span {
   margin-top: 10rem;
 }
 
-.explanation h1{
+.explanation h1 {
   margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 3rem;
+    line-height: 3.1rem;
+  }
+
+  .information {
+    width: 100%;
+  }
 }
 </style>

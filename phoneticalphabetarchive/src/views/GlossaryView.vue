@@ -43,4 +43,11 @@ h1 {
 .glossary {
   margin-top: 10rem;
 }
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 3rem;
+    line-height: 3.1rem;
+  }
+}
 </style>

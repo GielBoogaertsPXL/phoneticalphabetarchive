@@ -5,7 +5,7 @@ import alphabets from '@/assets/alphabets.json'
 const view = ref('list') // 'list' | 'grid'
 const search = ref('')
 const filterKey = ref(null) // 'language' | 'type' | null
-const filterValue = ref(null)
+const filterValues = ref([]) // selected options, can hold several
 const orderKey = ref(null) // 'year' | 'title' | 'number' | null
 const orderDir = ref('asc') // 'asc' | 'desc'
 
@@ -18,17 +18,15 @@ function getValues(alphabet, key) {
 
 // Clicking a filter category shows its options; clicking it again closes it
 function toggleFilterKey(key) {
-  if (filterKey.value === key) {
-    filterKey.value = null
-  } else {
-    filterKey.value = key
-  }
-  filterValue.value = null
+  filterKey.value = filterKey.value === key ? null : key
+  filterValues.value = []
 }
 
-// Clicking the selected option again clears it
+// Click adds the option to the selection, a second click removes it
 function toggleFilterValue(value) {
-  filterValue.value = filterValue.value === value ? null : value
+  filterValues.value = filterValues.value.includes(value)
+    ? filterValues.value.filter((v) => v !== value)
+    : [...filterValues.value, value]
 }
 
 // Click cycle: ascending -> descending -> off
@@ -67,8 +65,13 @@ const visibleAlphabets = computed(() => {
       const haystack = [a.title, a.creator, ...getValues(a, 'language')].join(' ').toLowerCase()
       if (!haystack.includes(query)) return false
     }
-    if (filterKey.value && filterValue.value) {
-      if (!getValues(a, filterKey.value).includes(filterValue.value)) return false
+    if (filterKey.value && filterValues.value.length) {
+      const own = getValues(a, filterKey.value)
+      const matches =
+        filterKey.value === 'type'
+          ? filterValues.value.every((v) => own.includes(v)) // must have all selected types
+          : filterValues.value.some((v) => own.includes(v)) // any selected language
+      if (!matches) return false
     }
     return true
   })
@@ -105,20 +108,6 @@ const visibleAlphabets = computed(() => {
           <button :class="{ active: view === 'grid' }" @click="view = 'grid'">Grid</button>
         </div>
 
-        <div class="filters">
-          <span>Filter by</span>
-          <button
-            :class="{ active: filterKey === 'language' }"
-            @click="toggleFilterKey('language')"
-          >
-            Language
-          </button>
-          <span>/</span>
-          <button :class="{ active: filterKey === 'type' }" @click="toggleFilterKey('type')">
-            Type
-          </button>
-        </div>
-
         <div class="order">
           <span>Order by</span>
           <button :class="{ active: orderKey === 'year' }" @click="toggleOrder('year')">
@@ -137,6 +126,20 @@ const visibleAlphabets = computed(() => {
           </button>
         </div>
 
+        <div class="filters">
+          <span>Filter by</span>
+          <button
+            :class="{ active: filterKey === 'language' }"
+            @click="toggleFilterKey('language')"
+          >
+            Language
+          </button>
+          <span>/</span>
+          <button :class="{ active: filterKey === 'type' }" @click="toggleFilterKey('type')">
+            Type
+          </button>
+        </div>
+
         <!-- Expanding container -->
         <Transition name="expand">
           <div class="options-wrap" v-if="filterOptions.length">
@@ -152,9 +155,10 @@ const visibleAlphabets = computed(() => {
                 v-for="(option, index) in filterOptions"
                 :key="option"
                 :data-index="index"
-                :class="{ active: filterValue === option }"
+                :class="{ active: filterValues.includes(option) }"
                 @click="toggleFilterValue(option)"
               >
+                <span v-if="filterKey === 'type'" class="swatch" :class="option"></span>
                 {{ option }}
               </button>
             </TransitionGroup>
@@ -172,7 +176,6 @@ const visibleAlphabets = computed(() => {
             <div class="image">
               <img
                 class="grapheme"
-                :class="{ 'no-invert': alphabet.color }"
                 :src="`/exemplary-graphemes/${alphabet.id}.svg`"
                 :alt="alphabet.title"
                 :data-id="alphabet.id"
@@ -189,8 +192,19 @@ const visibleAlphabets = computed(() => {
             </div>
           </div>
           <div class="information">
-            <h2>{{ alphabet.title }}</h2>
-            <p>{{ alphabet.year }}</p>
+            <div class="text">
+              <h2>{{ alphabet.title }}</h2>
+              <p>{{ alphabet.year }}</p>
+            </div>
+            <div class="type">
+              <div
+                v-if="alphabet.type?.includes('existing')"
+                class="existing"
+                title="Existing"
+              ></div>
+              <div v-if="alphabet.type?.includes('derived')" class="derived" title="Derived"></div>
+              <div v-if="alphabet.type?.includes('new')" class="new" title="New"></div>
+            </div>
           </div>
         </RouterLink>
 
@@ -291,15 +305,19 @@ button {
 
 .options button {
   font: var(--body-small);
+  text-transform: capitalize;
 }
 
-.options button:hover {
+.options button:hover,
+.options button.active {
   font: var(--body-small);
   font-weight: 500;
 }
 
-button:nth-child(1) {
-  padding-left: 0;
+.options .swatch {
+  display: inline-block;
+  height: 0.6rem;
+  margin-right: 0.35rem;
 }
 
 button:hover,
@@ -355,6 +373,31 @@ h2 {
   font: var(--body-small);
 }
 
+/* ---------- type squares ---------- */
+.type {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.existing,
+.derived,
+.new {
+  aspect-ratio: 1;
+  height: 1rem;
+}
+
+.existing {
+  background-color: #134d42;
+}
+
+.derived {
+  background-color: #31907d;
+}
+
+.new {
+  background-color: #612633;
+}
+
 /* ---------- list view ---------- */
 .list {
   display: flex;
@@ -390,7 +433,9 @@ h2 {
 .list .information {
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   text-align: right;
+  justify-content: space-between;
 }
 
 /* ---------- grid view ---------- */
@@ -402,15 +447,15 @@ h2 {
 .grid a {
   display: flex;
   justify-content: space-between;
-  padding: 3rem 1.5rem;
+  padding: 1.5rem;
 }
 
 .grid .image {
-  height: 6rem;
+  height: 5rem;
 }
 
 .grid .grapheme {
-  height: 6rem;
+  height: 5rem;
 }
 
 .grid .grapheme[data-id='colorbet'] {
@@ -425,13 +470,15 @@ h2 {
 .grid .information {
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
   text-align: right;
   width: 100%;
 }
 
 .grid .information h2 {
   font: var(--body-small);
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .empty {
@@ -440,6 +487,16 @@ h2 {
 
 @media screen and (max-width: 810px) {
   .list .details {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .modifiers {
+    flex-direction: column;
+  }
+
+  .view {
     display: none;
   }
 }

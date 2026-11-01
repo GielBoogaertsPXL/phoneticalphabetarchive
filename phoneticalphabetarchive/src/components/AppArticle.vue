@@ -25,6 +25,11 @@ article {
   border-top: 1px solid black;
   border-radius: 0.5rem;
   padding: 1.5rem 0.5rem;
+  transition: background-color 0.4s ease;
+}
+
+article:hover {
+  background-color: #d3d3d3;
 }
 
 div {
@@ -40,5 +45,17 @@ span {
 
 p {
   font: var(--body);
+}
+
+@media screen and (max-width: 600px) {
+  article {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem 0.5rem;
+  }
+
+  div {
+    width: 100%;
+  }
 }
 </style>
